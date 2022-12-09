@@ -2,6 +2,7 @@
   "header": {
     "home": "Home",
     "type_calculator": "Type calculator",
+    "login": "Login",
     "settings": "Settings"
   },
   "types": {

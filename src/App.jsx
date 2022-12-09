@@ -6,6 +6,8 @@ import SettingsPage from './pages/Settings';
 import TypeCalculatorPage from './pages/TypeCalculator';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import TradePage from './pages/Trade';
+import { LoginModalProvider } from './context/LoginModal';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +28,10 @@ const router = createBrowserRouter([
         element: <TypeCalculatorPage />,
       },
       {
+        path: 'trade',
+        element: <TradePage />,
+      },
+      {
         path: 'settings',
         element: <SettingsPage />,
       },
@@ -38,7 +44,9 @@ function App() {
   return (
     <>
       <ToastContainer />
-      <RouterProvider router={router} />;
+      <LoginModalProvider>
+        <RouterProvider router={router} />;
+      </LoginModalProvider>
     </>
   );
 }

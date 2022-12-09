@@ -3,7 +3,7 @@ import Select from '../components/Select';
 import useLanguage from '../hooks/useLanguage';
 import useTranslation from '../hooks/useTranslation';
 import { toast } from 'react-toastify';
-import Pokeball from '../components/Badges/Pokeball';
+import Pokeball from '../components/Icons/Pokeball';
 import useSettings from '../hooks/useSettings';
 
 export default function SettingsPage() {

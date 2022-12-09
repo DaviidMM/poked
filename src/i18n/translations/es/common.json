@@ -2,7 +2,11 @@
   "header": {
     "home": "Inicio",
     "type_calculator": "Calculadora de tipos",
+    "login": "Iniciar sesión",
     "settings": "Configuración"
+  },
+  "login_modal": {
+    "select_login_method": "Selecciona un método para iniciar sesión"
   },
   "types": {
     "normal": "Normal",
