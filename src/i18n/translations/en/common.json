@@ -1,0 +1,41 @@
+{
+  "header": {
+    "home": "Home",
+    "type_calculator": "Type calculator",
+    "settings": "Settings"
+  },
+  "types": {
+    "normal": "Normal",
+    "fire": "Fire",
+    "water": "Water",
+    "electric": "Electric",
+    "grass": "Grass",
+    "ice": "Ice",
+    "fighting": "Fighting",
+    "poison": "Poison",
+    "ground": "Ground",
+    "flying": "Flying",
+    "psychic": "Psychic",
+    "bug": "Bug",
+    "rock": "Rock",
+    "ghost": "Ghost",
+    "dragon": "Dragon",
+    "dark": "Dark",
+    "steel": "Steel",
+    "fairy": "Fairy"
+  },
+  "type_calculator": {
+    "choose_types": "Choose types",
+    "selected_types": "A pokemon with the following types",
+    "suffersX2": "Suffers x2 from:",
+    "suffersX4": "Suffers x4 from:",
+    "suffersX1": "Suffers x1 from:",
+    "suffersX0": "Immune from:",
+    "suffersX05": "Suffers x½ from:",
+    "suffersX025": "Suffers x¼ from:"
+  },
+  "settings": {
+    "save": "Save changes",
+    "language": "Language"
+  }
+}

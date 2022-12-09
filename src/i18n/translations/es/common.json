@@ -1,0 +1,41 @@
+{
+  "header": {
+    "home": "Inicio",
+    "type_calculator": "Calculadora de tipos",
+    "settings": "Configuración"
+  },
+  "types": {
+    "normal": "Normal",
+    "fire": "Fuego",
+    "water": "Agua",
+    "electric": "Eléctrico",
+    "grass": "Planta",
+    "ice": "Hielo",
+    "fighting": "Lucha",
+    "poison": "Veneno",
+    "ground": "Tierra",
+    "flying": "Volador",
+    "psychic": "Psíquico",
+    "bug": "Bicho",
+    "rock": "Roca",
+    "ghost": "Fantasma",
+    "dragon": "Dragón",
+    "dark": "Siniestro",
+    "steel": "Acero",
+    "fairy": "Hada"
+  },
+  "type_calculator": {
+    "choose_types": "Elige los tipos",
+    "selected_types": "Un pokemon con tipos",
+    "suffersX2": "Sufre x2 de:",
+    "suffersX4": "Sufre x4 de:",
+    "suffersX1": "Sufre x1 de:",
+    "suffersX0": "Inmune a:",
+    "suffersX05": "Sufre x½ de:",
+    "suffersX025": "Sufre x¼ de:"
+  },
+  "settings": {
+    "save": "Guardar cambios",
+    "language": "Idioma"
+  }
+}
