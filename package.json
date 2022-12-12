@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.5",
+    "firebase": "^9.15.0",
     "i18next": "^22.0.6",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",

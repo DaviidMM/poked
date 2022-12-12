@@ -1,14 +1,21 @@
-import { Link } from 'react-router-dom';
 import NavItem from '../NavItem';
 import Pokeball from '../Icons/Pokeball';
 import useTranslation from '../../hooks/useTranslation';
-import PokeballSettings from '../Icons/PokeballSettings';
 import Button from '../Button';
 import { useLoginModal } from '../../hooks/useLoginModal';
+import useAuth from '../../hooks/useAuth';
+import { logout } from '../../services/firebase';
 
 export default function Header() {
   const { t: translate } = useTranslation();
   const { openLoginModal } = useLoginModal();
+  const auth = useAuth();
+
+  console.log({ auth });
+
+  const handleLogout = () => {
+    logout();
+  };
 
   return (
     <header className="bg-red-600 py-10 flex flex-row w-full relative items-center xl:justify-center px-12 text-red-900 border-b-[6px] border-black">
@@ -27,16 +34,16 @@ export default function Header() {
           <NavItem to="trade">Punto de intercambio</NavItem>
         </ul>
       </nav>
-      <Button className="absolute right-14" onClick={openLoginModal}>
-        {translate('header.login')}
-      </Button>
-      {/* <Link
-        to="/settings"
-        className="px-4 py-2 rounded-full bg-white hover:bg-red-100 transition-colors absolute right-12 flex flex-row gap-2 font-semibold group"
-      >
-        <PokeballSettings className="w-6 h-6 group-hover:animate-shake origin-bottom" />
-        {translate('header.settings')}
-      </Link> */}
+      {auth.status === 'authenticated' ? (
+        <div className="absolute right-14">
+          <span className="text-white">{auth.user.email}</span>
+          <Button onClick={handleLogout}>Cerrar Sesión</Button>
+        </div>
+      ) : (
+        <Button className="absolute right-14" onClick={openLoginModal}>
+          {translate('header.login')}
+        </Button>
+      )}
     </header>
   );
 }

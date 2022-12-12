@@ -8,6 +8,8 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import TradePage from './pages/Trade';
 import { LoginModalProvider } from './context/LoginModal';
+import RegisterPage from './pages/Register';
+import { AuthProvider } from './context/Auth';
 
 const router = createBrowserRouter([
   {
@@ -35,6 +37,10 @@ const router = createBrowserRouter([
         path: 'settings',
         element: <SettingsPage />,
       },
+      {
+        path: 'register',
+        element: <RegisterPage />,
+      },
     ],
   },
 ]);
@@ -44,9 +50,11 @@ function App() {
   return (
     <>
       <ToastContainer />
-      <LoginModalProvider>
-        <RouterProvider router={router} />;
-      </LoginModalProvider>
+      <AuthProvider>
+        <LoginModalProvider>
+          <RouterProvider router={router} />;
+        </LoginModalProvider>
+      </AuthProvider>
     </>
   );
 }
