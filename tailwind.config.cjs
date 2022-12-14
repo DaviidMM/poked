@@ -6,6 +6,13 @@ module.exports = {
       animation: {
         shake: 'shake 0.5s cubic-bezier(.36,.07,.19,.97) both',
       },
+      backgroundSize: {
+        'size-200': '200% 200%',
+      },
+      backgroundPosition: {
+        'pos-0': '0% 0%',
+        'pos-100': '100% 100%',
+      },
       keyframes: {
         shake: {
           '10%, 90%': { transform: 'rotate(5deg)' },

@@ -6,7 +6,7 @@
     "settings": "Configuración"
   },
   "login_modal": {
-    "select_login_method": "Selecciona un método para iniciar sesión"
+    "title": "Iniciar sesión"
   },
   "types": {
     "normal": "Normal",

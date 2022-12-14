@@ -5,6 +5,9 @@
     "login": "Login",
     "settings": "Settings"
   },
+  "login_modal": {
+    "title": "Login"
+  },
   "types": {
     "normal": "Normal",
     "fire": "Fire",
