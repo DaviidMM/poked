@@ -2,20 +2,16 @@ import NavItem from '../NavItem';
 import Pokeball from '../Icons/Pokeball';
 import useTranslation from '../../hooks/useTranslation';
 import Button from '../Button';
-import { useLoginModal } from '../../hooks/useLoginModal';
+import { useSignInUpModal } from '../../hooks/useSignInUpModal';
 import useAuth from '../../hooks/useAuth';
 import { logout } from '../../services/firebase';
 
 export default function Header() {
   const { t: translate } = useTranslation();
-  const { openLoginModal } = useLoginModal();
+  const { openSignInUpModal } = useSignInUpModal();
   const auth = useAuth();
 
-  console.log({ auth });
-
-  const handleLogout = () => {
-    logout();
-  };
+  const handleLogout = () => logout();
 
   return (
     <header className="bg-red-600 py-10 flex flex-row w-full relative items-center xl:justify-center px-12 text-red-900 border-b-[6px] border-black">
@@ -40,7 +36,7 @@ export default function Header() {
           <Button onClick={handleLogout}>Cerrar Sesión</Button>
         </div>
       ) : (
-        <Button className="absolute right-14" onClick={openLoginModal}>
+        <Button className="!absolute right-14" onClick={openSignInUpModal}>
           {translate('header.login')}
         </Button>
       )}

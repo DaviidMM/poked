@@ -1,14 +1,14 @@
-import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { useState } from 'react';
-import { auth } from '../../services/firebase';
 import Input from '../Input';
 import Button from '../Button';
 import { toast } from 'react-toastify';
 
-export default function RegisterForm() {
+export default function RegisterForm({ handleRegister }) {
+  const [name, setName] = useState('David');
+  const [lastName, setLastName] = useState('Mulero');
   const [email, setEmail] = useState('davicitoo1612@gmail.com');
   const [password, setPassword] = useState('David123');
-  const [passwordConfirmation, setPasswordConfirmation] = useState('');
+  const [passwordConfirmation, setPasswordConfirmation] = useState('David123');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,23 +17,29 @@ export default function RegisterForm() {
       return toast.error('Las contraseñas no coinciden');
     }
 
-    createUserWithEmailAndPassword(auth, email, password)
-      .then((credential) => {
-        console.log({ credential });
-      })
-      .catch((err) => {
-        console.error(err);
-        if (err.code === 'auth/email-already-in-use') {
-          toast.error('El email ya está en uso');
-        }
-      });
+    handleRegister(email, password);
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="bg-red-600 font-semibold text-lg text-white [&_button]:text-red-900 [&_input]:text-red-900 p-4 rounded-3xl"
-    >
+    <form onSubmit={handleSubmit} className="flex flex-col gap-4 font-semibold">
+      <div className="flex flex-row justify-between gap-2">
+        <Input
+          className="w-full"
+          label="Name"
+          type="text"
+          id="name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+        <Input
+          className="w-full"
+          label="Last name"
+          type="text"
+          id="lastName"
+          value={lastName}
+          onChange={(e) => setLastName(e.target.value)}
+        />
+      </div>
       <Input
         label="Email"
         type="email"
@@ -55,8 +61,8 @@ export default function RegisterForm() {
         value={passwordConfirmation}
         onChange={(e) => setPasswordConfirmation(e.target.value)}
       />
-      <Button className="ml-auto mt-4" type="submit">
-        Regístrate
+      <Button color="red" type="submit">
+        Register
       </Button>
     </form>
   );
