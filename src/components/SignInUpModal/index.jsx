@@ -24,8 +24,12 @@ export default function SignInUpModal({ closeSignInUpModal, isOpen }) {
           <div className="fixed inset-0 bg-black bg-opacity-25" />
         </Transition.Child>
 
-        <div className="fixed inset-0 overflow-y-auto">
-          <div className="justify-center text-center flex h-full items-center">
+        <div className="fixed inset-0 max-h-screen">
+          <div
+            className={
+              'justify-center text-center h-screen max-h-screen overflow-auto p-16'
+            }
+          >
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
@@ -40,10 +44,34 @@ export default function SignInUpModal({ closeSignInUpModal, isOpen }) {
                   'w-full max-w-xl overflow-hidden mx-auto text-red-900 transform bg-white shadow-xl rounded-2xl'
                 }
               >
+                <div className="flex flex-row justify-between">
+                  <a
+                    onClick={triggerLogin}
+                    className={
+                      'px-4 py-2 text-left transition-all duration-200 ' +
+                      (isSigningIn
+                        ? 'grow bg-white pointer-events-none'
+                        : 'bg-red-600 text-white hover:bg-red-700 hover:cursor-pointer')
+                    }
+                  >
+                    <h3 className="text-xl font-bold text-center">Sign in</h3>
+                  </a>
+                  <a
+                    onClick={triggerRegister}
+                    className={
+                      'px-4 py-2 text-right transition-all duration-200 ' +
+                      (isSigningIn
+                        ? 'bg-red-600 text-white hover:bg-red-700 hover:cursor-pointer'
+                        : 'grow bg-white pointer-events-none')
+                    }
+                  >
+                    <h3 className="text-xl font-bold text-center">Register</h3>
+                  </a>
+                </div>
                 <div
                   className={
                     'flex items-center w-[200%] transition-[height] duration-200 ' +
-                    (isSigningIn ? 'h-[490px]' : 'h-[670px]')
+                    (isSigningIn ? 'h-[490px]' : 'h-[620px]')
                   }
                 >
                   <LoginContainer

@@ -13,13 +13,10 @@ export default function LoginContainer({ isSigningIn, triggerRegister }) {
   return (
     <div
       className={
-        'flex flex-col gap-4 justify-between w-1/2 transition-all duration-200 p-4 h-full' +
+        'flex flex-col gap-8 w-1/2 transition-all duration-200 p-4 h-full' +
         (isSigningIn ? '' : ' -translate-x-full opacity-0')
       }
     >
-      <h3 className="text-xl font-bold text-center">
-        {t('login_modal.title')}
-      </h3>
       <LoginForm handleLogin={handleLoginEmail} />
       <div className="flex justify-center items-center w-full relative my-4">
         <hr className="w-64 h-px bg-red-200 border-0" />

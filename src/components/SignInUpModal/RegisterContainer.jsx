@@ -11,11 +11,10 @@ export default function RegisterContainer({ isSigningIn, triggerLogin }) {
   return (
     <div
       className={
-        'flex flex-col gap-4 justify-between w-1/2 transition-all duration-200 p-4 h-full ' +
-        (isSigningIn ? 'opacity-0' : '-translate-x-full  opacity-100')
+        'flex flex-col gap-8 w-1/2 transition-all duration-200 p-4 h-full ' +
+        (isSigningIn ? 'opacity-0' : '-translate-x-full opacity-100')
       }
     >
-      <h3 className="text-xl font-bold text-center">Register</h3>
       <RegisterForm handleRegister={registerUserWithEmail} />
       <div className="flex justify-center items-center w-full relative my-4">
         <hr className="w-64 h-px bg-red-200 border-0" />
