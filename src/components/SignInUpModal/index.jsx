@@ -2,12 +2,21 @@ import { Fragment, useState } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import LoginContainer from './LoginContainer';
 import RegisterContainer from './RegisterContainer';
+import ForgottenPasswordContainer from './ForgottenPasswordContainer';
 
 export default function SignInUpModal({ closeSignInUpModal, isOpen }) {
   const [isSigningIn, setIsSigningIn] = useState(true);
+  const [isRememberingPassword, setIsRememberingPassword] = useState(false);
 
   const triggerRegister = () => setIsSigningIn(false);
-  const triggerLogin = () => setIsSigningIn(true);
+  const triggerLogin = () => {
+    setIsSigningIn(true);
+    setIsRememberingPassword(false);
+  };
+  const triggerRememberPassword = () => {
+    setIsRememberingPassword(true);
+    setIsSigningIn(true);
+  };
 
   return (
     <Transition appear show={isOpen} as={Fragment}>
@@ -45,38 +54,70 @@ export default function SignInUpModal({ closeSignInUpModal, isOpen }) {
                 }
               >
                 <div className="flex flex-row justify-between">
-                  <a
-                    onClick={triggerLogin}
-                    className={
-                      'px-4 py-2 text-left transition-all duration-200 ' +
-                      (isSigningIn
-                        ? 'grow bg-white pointer-events-none'
-                        : 'bg-red-600 text-white hover:bg-red-700 hover:cursor-pointer')
-                    }
-                  >
-                    <h3 className="text-xl font-bold text-center">Sign in</h3>
-                  </a>
-                  <a
-                    onClick={triggerRegister}
-                    className={
-                      'px-4 py-2 text-right transition-all duration-200 ' +
-                      (isSigningIn
-                        ? 'bg-red-600 text-white hover:bg-red-700 hover:cursor-pointer'
-                        : 'grow bg-white pointer-events-none')
-                    }
-                  >
-                    <h3 className="text-xl font-bold text-center">Register</h3>
-                  </a>
+                  {isRememberingPassword ? (
+                    <>
+                      <h3 className="text-xl font-bold py-2 grow">
+                        <span className="text-center">Forgotten password</span>
+                      </h3>
+                      <a
+                        className="bg-red-600 px-4 py-2 text-white hover:bg-red-700 hover:cursor-pointer"
+                        onClick={triggerLogin}
+                      >
+                        <h3 className="text-xl font-bold text-center">
+                          Back to login
+                        </h3>
+                      </a>
+                    </>
+                  ) : (
+                    <>
+                      <a
+                        onClick={triggerLogin}
+                        className={
+                          'px-4 py-2 text-left transition-all duration-200 ' +
+                          (isSigningIn
+                            ? 'grow bg-white pointer-events-none'
+                            : 'bg-red-600 text-white hover:bg-red-700 hover:cursor-pointer')
+                        }
+                      >
+                        <h3 className="text-xl font-bold text-center">
+                          Sign in
+                        </h3>
+                      </a>
+                      <a
+                        onClick={triggerRegister}
+                        className={
+                          'px-4 py-2 text-right transition-all duration-200 ' +
+                          (isSigningIn
+                            ? 'bg-red-600 text-white hover:bg-red-700 hover:cursor-pointer'
+                            : 'grow bg-white pointer-events-none')
+                        }
+                      >
+                        <h3 className="text-xl font-bold text-center">
+                          Register
+                        </h3>
+                      </a>
+                    </>
+                  )}
                 </div>
                 <div
                   className={
-                    'flex items-center w-[200%] transition-[height] duration-200 ' +
-                    (isSigningIn ? 'h-[490px]' : 'h-[620px]')
+                    'flex items-center w-[300%] transition-[height] duration-200 ' +
+                    (isRememberingPassword // eslint-disable-line
+                      ? 'h-[175px]' // eslint-disable-line
+                      : isSigningIn // eslint-disable-line
+                      ? 'h-[490px]' // eslint-disable-line
+                      : 'h-[620px]') // eslint-disable-line
                   }
                 >
+                  <ForgottenPasswordContainer
+                    isRememberingPassword={isRememberingPassword}
+                    triggerLogin={triggerLogin}
+                  />
                   <LoginContainer
                     isSigningIn={isSigningIn}
+                    isRememberingPassword={isRememberingPassword}
                     triggerRegister={triggerRegister}
+                    triggerRememberPassword={triggerRememberPassword}
                   />
                   <RegisterContainer
                     isSigningIn={isSigningIn}

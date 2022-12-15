@@ -5,17 +5,18 @@ import Button from '../Button';
 import RegisterForm from '../Forms/Register';
 
 export default function RegisterContainer({ isSigningIn, triggerLogin }) {
-  const { handleLoginGoogle, handleLoginTwitter, registerUserWithEmail } =
-    useSignInUpModal();
+  const { handleLoginGoogle, handleLoginTwitter } = useSignInUpModal();
 
   return (
     <div
       className={
         'flex flex-col gap-8 w-1/2 transition-all duration-200 p-4 h-full ' +
-        (isSigningIn ? 'opacity-0' : '-translate-x-full opacity-100')
+        (isSigningIn
+          ? '-translate-x-full opacity-0'
+          : '-translate-x-[200%] opacity-100')
       }
     >
-      <RegisterForm handleRegister={registerUserWithEmail} />
+      <RegisterForm />
       <div className="flex justify-center items-center w-full relative my-4">
         <hr className="w-64 h-px bg-red-200 border-0" />
         <span className="absolute left-1/2 px-3 font-medium text-red-900 bg-white -translate-x-1/2">

@@ -6,13 +6,13 @@ import { useSignInUpModal } from '../../hooks/useSignInUpModal';
 import { toast } from 'react-toastify';
 import Switch from '../Switch';
 
-export default function LoginForm({ handleLogin }) {
+export default function LoginForm({ triggerRememberPassword }) {
   const [email, setEmail] = useState('davicitoo1612@gmail.com');
   const [password, setPassword] = useState('David123');
   const [remember, setRemember] = useState(false);
   const [sending, setSending] = useState(false);
 
-  const { closeSignInUpModal } = useSignInUpModal();
+  const { closeSignInUpModal, handleLoginEmail } = useSignInUpModal();
 
   const handleEmailChange = (e) => setEmail(e.target.value);
   const handlePasswordChange = (e) => setPassword(e.target.value);
@@ -21,14 +21,13 @@ export default function LoginForm({ handleLogin }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSending(true);
-    handleLogin({ email, password, remember })
+    handleLoginEmail({ email, password, remember })
       .then((credential) => {
         console.log({ credential });
         closeSignInUpModal();
       })
       .catch((err) => {
         console.error(err);
-        console.log({ err });
         toast.error(
           'No se ha podido iniciar sesión con las credenciales indicadas.'
         );
@@ -56,11 +55,19 @@ export default function LoginForm({ handleLogin }) {
           label="Remember me"
           onChange={handleRememberChange}
         />
-        <a className="underline hover:text-red-700 hover:cursor-pointer">
+        <a
+          className="underline hover:text-red-700 hover:cursor-pointer"
+          onClick={triggerRememberPassword}
+        >
           Forgot password?
         </a>
       </div>
-      <Button color="red" type="submit" className="text-center">
+      <Button
+        className="text-center"
+        color="red"
+        disabled={sending}
+        type="submit"
+      >
         {sending ? (
           <Pokeball className="w-6 h-6 mx-auto animate-spin" />
         ) : (

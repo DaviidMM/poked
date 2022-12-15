@@ -3,6 +3,7 @@ import {
   signInWithEmailAndPassword,
   inMemoryPersistence,
   browserLocalPersistence,
+  sendPasswordResetEmail,
 } from 'firebase/auth';
 import { createContext, useState } from 'react';
 import SignInUpModal from '../../components/SignInUpModal';
@@ -35,6 +36,11 @@ export const SignInUpModalProvider = ({ children }) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
+  const handlePasswordReset = (email) => {
+    console.log('handlePasswordReset', email);
+    return sendPasswordResetEmail(auth, email);
+  };
+
   return (
     <SignInUpModalContext.Provider
       value={{
@@ -44,6 +50,7 @@ export const SignInUpModalProvider = ({ children }) => {
         handleLoginGoogle,
         handleLoginTwitter,
         registerUserWithEmail,
+        handlePasswordReset,
       }}
     >
       <SignInUpModal

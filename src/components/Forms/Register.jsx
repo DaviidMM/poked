@@ -2,13 +2,15 @@ import { useState } from 'react';
 import Input from '../Input';
 import Button from '../Button';
 import { toast } from 'react-toastify';
+import { useSignInUpModal } from '../../hooks/useSignInUpModal';
 
-export default function RegisterForm({ handleRegister }) {
+export default function RegisterForm() {
   const [name, setName] = useState('David');
   const [lastName, setLastName] = useState('Mulero');
   const [email, setEmail] = useState('davicitoo1612@gmail.com');
   const [password, setPassword] = useState('David123');
   const [passwordConfirmation, setPasswordConfirmation] = useState('David123');
+  const { registerUserWithEmail } = useSignInUpModal();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,7 +19,7 @@ export default function RegisterForm({ handleRegister }) {
       return toast.error('Las contraseñas no coinciden');
     }
 
-    handleRegister(email, password);
+    registerUserWithEmail(email, password);
   };
 
   return (
