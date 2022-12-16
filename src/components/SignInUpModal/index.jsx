@@ -3,8 +3,11 @@ import { Dialog, Transition } from '@headlessui/react';
 import LoginContainer from './LoginContainer';
 import RegisterContainer from './RegisterContainer';
 import ForgottenPasswordContainer from './ForgottenPasswordContainer';
+import { FaArrowRight, FaUser } from 'react-icons/fa';
+import useTranslation from '../../hooks/useTranslation';
 
 export default function SignInUpModal({ closeSignInUpModal, isOpen }) {
+  const { t } = useTranslation();
   const [isSigningIn, setIsSigningIn] = useState(true);
   const [isRememberingPassword, setIsRememberingPassword] = useState(false);
 
@@ -57,15 +60,18 @@ export default function SignInUpModal({ closeSignInUpModal, isOpen }) {
                   {isRememberingPassword ? (
                     <>
                       <h3 className="text-xl font-bold py-2 grow">
-                        <span className="text-center">Forgotten password</span>
+                        <span className="text-center">
+                          {t('sign_in_up.forgotten_password')}
+                        </span>
                       </h3>
                       <a
-                        className="bg-red-600 px-4 py-2 text-white hover:bg-red-700 hover:cursor-pointer"
+                        className="bg-red-600 px-4 py-2 text-white hover:bg-red-700 hover:cursor-pointer flex flex-row gap-2 items-center"
                         onClick={triggerLogin}
                       >
                         <h3 className="text-xl font-bold text-center">
-                          Back to login
+                          {t('sign_in_up.back_login')}
                         </h3>
+                        <FaArrowRight className="w-5 h-5" />
                       </a>
                     </>
                   ) : (
@@ -73,28 +79,33 @@ export default function SignInUpModal({ closeSignInUpModal, isOpen }) {
                       <a
                         onClick={triggerLogin}
                         className={
-                          'px-4 py-2 text-left transition-all duration-200 ' +
+                          'px-4 py-2 text-left transition-all duration-200 flex flex-row gap-2 items-center justify-center ' +
                           (isSigningIn
                             ? 'grow bg-white pointer-events-none'
                             : 'bg-red-600 text-white hover:bg-red-700 hover:cursor-pointer')
                         }
                       >
-                        <h3 className="text-xl font-bold text-center">
-                          Sign in
+                        <FaUser className="w-5 h-5" />
+                        <h3 className="text-xl font-bold">
+                          {t('login_form.title')}
                         </h3>
                       </a>
                       <a
                         onClick={triggerRegister}
                         className={
-                          'px-4 py-2 text-right transition-all duration-200 ' +
+                          'px-4 py-2 text-right transition-all duration-200 flex flex-row gap-2 items-center justify-center ' +
                           (isSigningIn
                             ? 'bg-red-600 text-white hover:bg-red-700 hover:cursor-pointer'
                             : 'grow bg-white pointer-events-none')
                         }
                       >
-                        <h3 className="text-xl font-bold text-center">
-                          Register
-                        </h3>
+                        <img
+                          className="h-7"
+                          src="/rotomdex.png"
+                          alt="Rotomdex Icon"
+                          title="Rotomdex"
+                        />
+                        <h3 className="text-xl font-bold">Register</h3>
                       </a>
                     </>
                   )}

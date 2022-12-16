@@ -5,8 +5,10 @@ import Pokeball from '../Icons/Pokeball';
 import { useSignInUpModal } from '../../hooks/useSignInUpModal';
 import { toast } from 'react-toastify';
 import Switch from '../Switch';
+import useTranslation from '../../hooks/useTranslation';
 
 export default function LoginForm({ triggerRememberPassword }) {
+  const { t } = useTranslation();
   const [email, setEmail] = useState('davicitoo1612@gmail.com');
   const [password, setPassword] = useState('David123');
   const [remember, setRemember] = useState(false);
@@ -44,7 +46,7 @@ export default function LoginForm({ triggerRememberPassword }) {
         onChange={handleEmailChange}
       />
       <Input
-        label="Password"
+        label={t('general.password')}
         type="password"
         value={password}
         onChange={handlePasswordChange}
@@ -52,14 +54,14 @@ export default function LoginForm({ triggerRememberPassword }) {
       <div className="flex justify-between">
         <Switch
           enabled={remember}
-          label="Remember me"
+          label={t('login_form.remember_me')}
           onChange={handleRememberChange}
         />
         <a
           className="underline hover:text-red-700 hover:cursor-pointer"
           onClick={triggerRememberPassword}
         >
-          Forgot password?
+          {t('login_form.forgot_password')}
         </a>
       </div>
       <Button
@@ -71,7 +73,7 @@ export default function LoginForm({ triggerRememberPassword }) {
         {sending ? (
           <Pokeball className="w-6 h-6 mx-auto animate-spin" />
         ) : (
-          'Login'
+          t('login_form.title')
         )}
       </Button>
     </form>

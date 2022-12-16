@@ -4,9 +4,11 @@ import Button from '../Button';
 import Pokeball from '../Icons/Pokeball';
 import { useSignInUpModal } from '../../hooks/useSignInUpModal';
 import { toast } from 'react-toastify';
+import useTranslation from '../../hooks/useTranslation';
 
 export default function ForgottenPasswordForm({ triggerLogin }) {
-  const [email, setEmail] = useState('davicitoo1612@gmail.com');
+  const { t } = useTranslation();
+  const [email, setEmail] = useState('');
   const [sending, setSending] = useState(false);
 
   const { handlePasswordReset } = useSignInUpModal();
@@ -48,7 +50,7 @@ export default function ForgottenPasswordForm({ triggerLogin }) {
         {sending ? (
           <Pokeball className="w-6 h-6 mx-auto animate-spin" />
         ) : (
-          'Send password reset email'
+          t('remember_pw_form.send')
         )}
       </Button>
     </form>

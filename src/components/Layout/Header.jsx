@@ -7,7 +7,7 @@ import useAuth from '../../hooks/useAuth';
 import { logout } from '../../services/firebase';
 
 export default function Header() {
-  const { t: translate } = useTranslation();
+  const { t } = useTranslation();
   const { openSignInUpModal } = useSignInUpModal();
   const auth = useAuth();
 
@@ -23,11 +23,10 @@ export default function Header() {
       </button>
       <nav className="hidden xl:block">
         <ul className="flex flex-row gap-4">
-          <NavItem to="">{translate('header.home')}</NavItem>
-          <NavItem to="type-calculator">
-            {translate('header.type_calculator')}
-          </NavItem>
+          <NavItem to="">{t('header.home')}</NavItem>
+          <NavItem to="type-calculator">{t('header.type_calculator')}</NavItem>
           <NavItem to="trade">Punto de intercambio</NavItem>
+          <NavItem to="raids">Raids</NavItem>
         </ul>
       </nav>
       {auth.status === 'authenticated' ? (
@@ -37,7 +36,7 @@ export default function Header() {
         </div>
       ) : (
         <Button className="!absolute right-14" onClick={openSignInUpModal}>
-          {translate('header.login')}
+          {t('header.login')}
         </Button>
       )}
     </header>

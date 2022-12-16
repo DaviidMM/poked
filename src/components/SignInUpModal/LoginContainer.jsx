@@ -1,3 +1,4 @@
+import { Trans } from 'react-i18next';
 import { FaTwitter } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
 import { useSignInUpModal } from '../../hooks/useSignInUpModal';
@@ -27,7 +28,7 @@ export default function LoginContainer({
       <div className="flex justify-center items-center w-full relative my-4">
         <hr className="w-64 h-px bg-red-200 border-0" />
         <span className="absolute left-1/2 px-3 font-medium text-red-900 bg-white -translate-x-1/2">
-          or
+          {t('general.or')}
         </span>
       </div>
       <div className="flex flex-row gap-4 justify-center">
@@ -51,12 +52,12 @@ export default function LoginContainer({
         </Button>
       </div>
       <span className="text-center">
-        ¿Nuevo en Poke<i>D</i>?{' '}
+        <Trans i18nKey="sign_in_up.new" t={t} />{' '}
         <a
           className="underline font-bold hover:text-red-700 hover:cursor-pointer"
           onClick={triggerRegister}
         >
-          Regístrate!
+          {t('general.register')}
         </a>
       </span>
     </div>

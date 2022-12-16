@@ -57,13 +57,13 @@
   },
   {
     "name": "ground",
-    "immunes": ["electric"],
+    "immunes": ["flying"],
     "weaknesses": ["grass", "bug"],
     "strengths": ["fire", "electric", "poison", "rock", "steel"]
   },
   {
     "name": "flying",
-    "immunes": ["ground"],
+    "immunes": [],
     "weaknesses": ["electric", "rock", "steel"],
     "strengths": ["grass", "fighting", "bug"]
   },
@@ -95,7 +95,7 @@
   },
   {
     "name": "ghost",
-    "immunes": ["normal, fighting"],
+    "immunes": ["normal", "fighting"],
     "weaknesses": ["dark"],
     "strengths": ["psychic", "ghost"]
   },

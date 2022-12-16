@@ -5,8 +5,23 @@
     "login": "Login",
     "settings": "Settings"
   },
-  "login_modal": {
-    "title": "Login"
+  "general": {
+    "password": "Password",
+    "or": "or",
+    "register": "Register"
+  },
+  "sign_in_up": {
+    "forgotten_password": "Forgotten password",
+    "back_login": "Back to login",
+    "new": "¿New at Poke<i>D</i>?"
+  },
+  "remember_pw_form": {
+    "send": "Send password reset email"
+  },
+  "login_form": {
+    "title": "Sign in",
+    "remember_me": "Remember me",
+    "forgot_password": "Forgot password?"
   },
   "types": {
     "normal": "Normal",

@@ -5,8 +5,23 @@
     "login": "Iniciar sesión",
     "settings": "Configuración"
   },
-  "login_modal": {
-    "title": "Iniciar sesión"
+  "general": {
+    "password": "Contraseña",
+    "or": "o",
+    "register": "Regístrate"
+  },
+  "sign_in_up": {
+    "forgotten_password": "Contraseña olvidada",
+    "back_login": "Iniciar sesión",
+    "new": "¿Nuevo en Poke<i>D</i>?"
+  },
+  "remember_pw_form": {
+    "send": "Enviar email de recuperación de contraseña"
+  },
+  "login_form": {
+    "title": "Iniciar sesión",
+    "remember_me": "No cerrar sesión",
+    "forgot_password": "¿Olvidaste la contraseña?"
   },
   "types": {
     "normal": "Normal",

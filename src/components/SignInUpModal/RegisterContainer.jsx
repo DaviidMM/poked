@@ -1,10 +1,12 @@
 import { FaTwitter } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
 import { useSignInUpModal } from '../../hooks/useSignInUpModal';
+import useTranslation from '../../hooks/useTranslation';
 import Button from '../Button';
 import RegisterForm from '../Forms/Register';
 
 export default function RegisterContainer({ isSigningIn, triggerLogin }) {
+  const { t } = useTranslation();
   const { handleLoginGoogle, handleLoginTwitter } = useSignInUpModal();
 
   return (
@@ -20,7 +22,7 @@ export default function RegisterContainer({ isSigningIn, triggerLogin }) {
       <div className="flex justify-center items-center w-full relative my-4">
         <hr className="w-64 h-px bg-red-200 border-0" />
         <span className="absolute left-1/2 px-3 font-medium text-red-900 bg-white -translate-x-1/2">
-          or
+          {t('general.or')}
         </span>
       </div>
       <div className="flex flex-row gap-4 justify-center">

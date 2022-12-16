@@ -37,7 +37,6 @@ export const SignInUpModalProvider = ({ children }) => {
   };
 
   const handlePasswordReset = (email) => {
-    console.log('handlePasswordReset', email);
     return sendPasswordResetEmail(auth, email);
   };
 
