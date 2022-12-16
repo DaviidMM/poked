@@ -8,7 +8,9 @@
   "general": {
     "password": "Contraseña",
     "or": "o",
-    "register": "Regístrate"
+    "register": "Regístrate",
+    "show_password": "Mostrar contraseña",
+    "hide_password": "Ocultar contraseña"
   },
   "sign_in_up": {
     "forgotten_password": "Contraseña olvidada",
@@ -22,6 +24,19 @@
     "title": "Iniciar sesión",
     "remember_me": "No cerrar sesión",
     "forgot_password": "¿Olvidaste la contraseña?"
+  },
+  "register_form": {
+    "title": "Registro",
+    "already_member": "¿Ya tienes cuenta en Poke<i>D</i>?",
+    "login_if_member": "Inicia sesión",
+    "name": "Nombre",
+    "last_name": "Apellido/s",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "confirm_password": "Confirmar contraseña",
+    "submit": "¡Regístrame!",
+    "all_fields_required": "Todos los campos son obligatorios",
+    "passwords_unmatch": "Las contraseñas no coinciden"
   },
   "types": {
     "normal": "Normal",

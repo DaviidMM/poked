@@ -6,6 +6,7 @@ import { useSignInUpModal } from '../../hooks/useSignInUpModal';
 import { toast } from 'react-toastify';
 import Switch from '../Switch';
 import useTranslation from '../../hooks/useTranslation';
+import PasswordInput from '../PasswordInput';
 
 export default function LoginForm({ triggerRememberPassword }) {
   const { t } = useTranslation();
@@ -45,7 +46,7 @@ export default function LoginForm({ triggerRememberPassword }) {
         value={email}
         onChange={handleEmailChange}
       />
-      <Input
+      <PasswordInput
         label={t('general.password')}
         type="password"
         value={password}

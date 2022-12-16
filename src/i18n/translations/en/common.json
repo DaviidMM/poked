@@ -8,7 +8,9 @@
   "general": {
     "password": "Password",
     "or": "or",
-    "register": "Register"
+    "register": "Register",
+    "show_password": "Show password",
+    "hide_password": "Hide password"
   },
   "sign_in_up": {
     "forgotten_password": "Forgotten password",
@@ -22,6 +24,19 @@
     "title": "Sign in",
     "remember_me": "Remember me",
     "forgot_password": "Forgot password?"
+  },
+  "register_form": {
+    "title": "Register",
+    "already_member": "¿Already a trainer at Poke<i>D</i>?",
+    "login_if_member": "Sign in!",
+    "name": "Name",
+    "last_name": "Last name",
+    "email": "E-mail",
+    "password": "Password",
+    "confirm_password": "Confirm password",
+    "submit": "Sign me up!",
+    "all_fields_required": "All fields are required",
+    "passwords_unmatch": "Passwords do not match"
   },
   "types": {
     "normal": "Normal",

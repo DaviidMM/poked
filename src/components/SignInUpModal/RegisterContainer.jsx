@@ -1,3 +1,4 @@
+import { Trans } from 'react-i18next';
 import { FaTwitter } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
 import { useSignInUpModal } from '../../hooks/useSignInUpModal';
@@ -46,12 +47,12 @@ export default function RegisterContainer({ isSigningIn, triggerLogin }) {
         </Button>
       </div>
       <span className="text-center">
-        ¿Ya tienes cuenta en Poke<i>D</i>?{' '}
+        <Trans t={t} i18nKey="register_form.already_member" />{' '}
         <a
           className="underline font-bold hover:text-red-700 hover:cursor-pointer"
           onClick={triggerLogin}
         >
-          Inicia sesión
+          {t('register_form.login_if_member')}
         </a>
       </span>
     </div>

@@ -3,8 +3,11 @@ import Input from '../Input';
 import Button from '../Button';
 import { toast } from 'react-toastify';
 import { useSignInUpModal } from '../../hooks/useSignInUpModal';
+import useTranslation from '../../hooks/useTranslation';
+import PasswordInput from '../PasswordInput';
 
 export default function RegisterForm() {
+  const { t } = useTranslation();
   const [name, setName] = useState('David');
   const [lastName, setLastName] = useState('Mulero');
   const [email, setEmail] = useState('davicitoo1612@gmail.com');
@@ -15,8 +18,12 @@ export default function RegisterForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    if (!name || !lastName || !email || !password || !passwordConfirmation) {
+      return toast.error(t('register_form.all_fields_required'));
+    }
+
     if (password !== passwordConfirmation) {
-      return toast.error('Las contraseñas no coinciden');
+      return toast.error(t('register_form.passwords_unmatch'));
     }
 
     registerUserWithEmail(email, password);
@@ -27,7 +34,7 @@ export default function RegisterForm() {
       <div className="flex flex-row justify-between gap-2">
         <Input
           className="w-full"
-          label="Name"
+          label={t('register_form.name')}
           type="text"
           id="name"
           value={name}
@@ -35,7 +42,7 @@ export default function RegisterForm() {
         />
         <Input
           className="w-full"
-          label="Last name"
+          label={t('register_form.last_name')}
           type="text"
           id="lastName"
           value={lastName}
@@ -43,28 +50,27 @@ export default function RegisterForm() {
         />
       </div>
       <Input
-        label="Email"
+        label={t('register_form.email')}
         type="email"
         id="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
-      <Input
-        label="Password"
-        type="password"
+      <PasswordInput
+        label={t('register_form.password')}
         id="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
       <Input
-        label="Password confirm"
+        label={t('register_form.confirm_password')}
         type="password"
         id="passwordConfirmation"
         value={passwordConfirmation}
         onChange={(e) => setPasswordConfirmation(e.target.value)}
       />
       <Button color="red" type="submit">
-        Register
+        {t('register_form.submit')}
       </Button>
     </form>
   );

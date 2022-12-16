@@ -105,7 +105,9 @@ export default function SignInUpModal({ closeSignInUpModal, isOpen }) {
                           alt="Rotomdex Icon"
                           title="Rotomdex"
                         />
-                        <h3 className="text-xl font-bold">Register</h3>
+                        <h3 className="text-xl font-bold">
+                          {t('register_form.title')}
+                        </h3>
                       </a>
                     </>
                   )}
