@@ -12,7 +12,7 @@ export default function LoginForm({ triggerRememberPassword }) {
   const { t } = useTranslation();
   const [email, setEmail] = useState('davicitoo1612@gmail.com');
   const [password, setPassword] = useState('David123');
-  const [remember, setRemember] = useState(false);
+  const [remember, setRemember] = useState(true);
   const [sending, setSending] = useState(false);
 
   const { closeSignInUpModal, handleLoginEmail } = useSignInUpModal();

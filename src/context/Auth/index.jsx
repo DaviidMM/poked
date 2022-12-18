@@ -8,6 +8,7 @@ export const AuthProvider = ({ children }) => {
   const [contextValue, setContextValue] = useState({
     user: null,
     status: authStatus.loading,
+    token: null,
   });
 
   useEffect(() => checkAuthState(setContextValue), []);

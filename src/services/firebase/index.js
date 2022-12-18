@@ -70,6 +70,4 @@ export const checkAuthState = (onChange) => {
   });
 };
 
-export const logout = () => {
-  return signOut(auth);
-};
+export const logout = () => signOut(auth);
