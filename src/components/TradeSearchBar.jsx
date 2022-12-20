@@ -1,7 +1,7 @@
 import Input from './Input';
-import Select from './Select';
+import Switch from './Switch';
 
-export default function TradeSearchBar({ handleSearch }) {
+export default function TradeSearchBar({ search, handleSearch }) {
   return (
     <div className="bg-red-800 text-white p-4 rounded-xl flex flex-row gap-4 [&_label]:font-bold [&>div>div]:bg-white">
       <Input
@@ -18,24 +18,19 @@ export default function TradeSearchBar({ handleSearch }) {
         name="reciving"
         onChange={handleSearch}
       />
-      <Select
-        label="Shiny"
-        name="shiny"
-        id="shiny"
-        options={[
-          { label: 'Indiferente', value: -1 },
-          { label: 'Si', value: true },
-          { label: 'No', value: false },
-        ]}
-        onChange={(e) =>
-          handleSearch({
-            target: {
-              name: 'shiny',
-              value: Number(e.target.value) || e.target.value === 'true',
-            },
-          })
-        }
-      />
+      <div>
+        <label htmlFor="shiny" className="block mb-3 text-left">
+          Shiny
+        </label>
+        <Switch
+          name="shiny"
+          id="shiny"
+          enabled={search.shiny}
+          onChange={() => {
+            handleSearch({ target: { name: 'shiny', value: !search.shiny } });
+          }}
+        />
+      </div>
     </div>
   );
 }

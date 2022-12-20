@@ -25,7 +25,7 @@ export default function Button({
   return (
     <div
       className={
-        'group rounded-full overflow-hidden relative [&:has(button:disabled)]:opacity-75 [&:has(button:disabled)]:cursor-not-allowed [&:has(button:disabled)]:pointer-events-none' +
+        'group/button rounded-full overflow-hidden relative [&:has(button:disabled)]:opacity-75 [&:has(button:disabled)]:cursor-not-allowed [&:has(button:disabled)]:pointer-events-none' +
         ` ${colors[color]} ` +
         (className ? ' ' + className : '') +
         (border && !color ? ' border-2 border-red-900' : '')
@@ -43,7 +43,7 @@ export default function Button({
       </button>
       <span
         className={
-          'z-10 block rounded-full h-full absolute top-0 left-0 w-0 group-hover:w-full transition-all peer-disabled:w-0' +
+          'z-10 block rounded-full h-full absolute top-0 left-0 w-0 group-hover/button:w-full transition-all peer-disabled:w-0' +
           ' ' +
           hoverColors[color]
         }
