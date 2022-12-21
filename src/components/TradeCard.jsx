@@ -39,7 +39,7 @@ export default function TradeCard({ giving, reciving }) {
           />
         </div>
         <div className="rounded-2xl -mt-14 group-hover:mt-0 transition-all duration-200 text-white p-2">
-          <h1 className="py-2 text-xl font-bold text-right px-2">
+          <h1 className="pt-6 pb-0 text-xl font-bold text-right group-hover:py-1 transition-all duration-200 px-2">
             {giving.name} Nv. {giving.level}
           </h1>
           <div className="text-left grid grid-cols-2 gap-0.5 mb-2">
