@@ -9,7 +9,8 @@ const pokeOffers = [
   {
     giving: {
       name: 'Mewtwo',
-      sprite: '/pokemon/icons/0150_00_00_00.png',
+      sprite:
+        'https://img.pokemondb.net/sprites/scarlet-violet/normal/mewtwo.png',
       level: 100,
       object: null,
       shiny: false,
@@ -18,7 +19,8 @@ const pokeOffers = [
     },
     reciving: {
       name: 'Charizard',
-      sprite: '/pokemon/icons/0006_00_00_00.png',
+      sprite:
+        'https://img.pokemondb.net/sprites/scarlet-violet/normal/charizard.png',
       level: 100,
       object: null,
       shiny: false,
@@ -27,7 +29,8 @@ const pokeOffers = [
   {
     giving: {
       name: 'Charmeleon',
-      sprite: '/pokemon/icons/0005_00_00_00.png',
+      sprite:
+        'https://img.pokemondb.net/sprites/scarlet-violet/normal/charmeleon.png',
       level: 100,
       object: null,
       shiny: true,
@@ -46,7 +49,8 @@ const pokeOffers = [
   {
     giving: {
       name: 'Gyarados',
-      sprite: '/pokemon/icons/0130_00_00_00.png',
+      sprite:
+        'https://img.pokemondb.net/sprites/scarlet-violet/normal/gyarados.png',
       level: 100,
       object: null,
       shiny: false,
