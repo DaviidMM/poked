@@ -1,9 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 
 export default function usePokemonList() {
-  const [pokemonList, setPokemonList] = useState([]);
-
-  useEffect(() => {}, []);
-
-  return pokemonList;
+  return useSelector((state) => state.pokemonList);
 }

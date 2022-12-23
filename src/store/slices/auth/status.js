@@ -1,7 +1,7 @@
-const authStatuses = {
+const status = {
   authenticated: 'authenticated',
   unauthenticated: 'unauthenticated',
   loading: 'loading',
 };
 
-export default authStatuses;
+export default status;

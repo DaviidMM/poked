@@ -5,8 +5,8 @@ import NotFoundPage from '../pages/NotFound';
 import SettingsPage from '../pages/Settings';
 import TradePage from '../pages/Trade';
 import TypeCalculatorPage from '../pages/TypeCalculator';
-import authStatuses from '../context/Auth/status';
 import LoadingPokeball from '../components/Loading/Pokeball';
+import authStatuses from '../store/slices/auth/status';
 
 export default function AppRouter() {
   const auth = useAuth();

@@ -1,7 +1,12 @@
 import { Dialog, Transition } from '@headlessui/react';
-import { Fragment } from 'react';
+import { Fragment, useState } from 'react';
+import { FaQuestion } from 'react-icons/fa';
+import { TbArrowsLeftRight } from 'react-icons/tb';
+import Select from './Select.jsx';
 
 export default function TradeModal({ open, closeModal, giving, reciving }) {
+  const [recivingPokemon, setRecivingPokemon] = useState(reciving);
+
   return (
     <Transition appear show={open} as={Fragment}>
       <Dialog as="div" className="relative z-50" onClose={closeModal}>
@@ -34,11 +39,44 @@ export default function TradeModal({ open, closeModal, giving, reciving }) {
             >
               <Dialog.Panel
                 className={
-                  'w-full max-w-xl overflow-hidden mx-auto text-red-900 transform bg-white shadow-xl rounded-2xl'
+                  'max-w-2xl overflow-hidden mx-auto text-red-900 transform bg-white shadow-xl rounded-2xl p-4'
                 }
               >
-                <Dialog.Title as="h1">Trade</Dialog.Title>
-                Modal para para ofrecer un pokemon a cambio de {giving.name}
+                <div className="flex flex-row justify-between items-center">
+                  <div className="w-64">
+                    <h1 className="text-2xl font-semibold">{giving.name}</h1>
+                    <img
+                      src={`/pokemon/icons/${giving.name}.png`}
+                      alt={giving.name}
+                    />
+                  </div>
+                  <TbArrowsLeftRight className="w-12 h-12" />
+                  <div className="w-64 flex flex-col gap-4">
+                    {recivingPokemon ? (
+                      <>
+                        <h1 className="text-2xl font-semibold">
+                          {recivingPokemon.name}
+                        </h1>
+                        <img
+                          src={`/pokemon/icons/${recivingPokemon.name}.png`}
+                          alt={recivingPokemon.name}
+                        />
+                      </>
+                    ) : (
+                      <FaQuestion className="w-full h-full p-16" />
+                    )}
+                    <Select
+                      value={recivingPokemon?.name}
+                      onChange={(e) =>
+                        setRecivingPokemon({ name: e.target.value })
+                      }
+                      options={[
+                        { label: 'Magikarp', value: 'Magikarp' },
+                        { label: 'Pikachu', value: 'Pikachu' },
+                      ]}
+                    />
+                  </div>
+                </div>
               </Dialog.Panel>
             </Transition.Child>
           </div>

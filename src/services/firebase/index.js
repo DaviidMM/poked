@@ -1,11 +1,6 @@
 import { initializeApp } from 'firebase/app';
 import { getAnalytics } from 'firebase/analytics';
-import {
-  getAuth,
-  getIdToken,
-  onAuthStateChanged,
-  signOut,
-} from 'firebase/auth';
+import { getAuth, signOut } from 'firebase/auth';
 import { getEnvVars } from '../../utils';
 
 const env = getEnvVars();
@@ -33,7 +28,7 @@ export const app = initializeApp(firebaseConfig);
 export const analytics = getAnalytics(app);
 export const auth = getAuth(app);
 
-const mapUserFromFirebase = (user) => {
+export const mapUserFromFirebase = (user) => {
   if (!user) {
     return null;
   }
@@ -44,30 +39,6 @@ const mapUserFromFirebase = (user) => {
     email,
     uid,
   };
-};
-
-const authStatus = {
-  authenticated: 'authenticated',
-  unauthenticated: 'unauthenticated',
-  loading: 'loading',
-};
-
-export const checkAuthState = (onChange) => {
-  return onAuthStateChanged(auth, async (user) => {
-    const normalizedUser = mapUserFromFirebase(user);
-    if (normalizedUser) {
-      return onChange({
-        user: normalizedUser,
-        status: authStatus.authenticated,
-        token: await getIdToken(user),
-      });
-    }
-    return onChange({
-      user: null,
-      status: authStatus.unauthenticated,
-      token: null,
-    });
-  });
 };
 
 export const logout = () => signOut(auth);

@@ -33,7 +33,7 @@ export default function TradeCard({ giving, reciving }) {
             ¡Me interesa!
           </span>
           <img
-            src={giving.sprite}
+            src={`/pokemon/icons/${giving.name}.png`}
             className="group-hover:translate-x-2 relative -mt-14 transition-all duration-200 z-20"
             alt={giving.name}
           />

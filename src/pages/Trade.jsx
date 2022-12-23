@@ -9,8 +9,6 @@ const pokeOffers = [
   {
     giving: {
       name: 'Mewtwo',
-      sprite:
-        'https://img.pokemondb.net/sprites/scarlet-violet/normal/mewtwo.png',
       level: 100,
       object: null,
       shiny: false,
@@ -19,8 +17,6 @@ const pokeOffers = [
     },
     reciving: {
       name: 'Charizard',
-      sprite:
-        'https://img.pokemondb.net/sprites/scarlet-violet/normal/charizard.png',
       level: 100,
       object: null,
       shiny: false,
@@ -29,8 +25,6 @@ const pokeOffers = [
   {
     giving: {
       name: 'Charmeleon',
-      sprite:
-        'https://img.pokemondb.net/sprites/scarlet-violet/normal/charmeleon.png',
       level: 100,
       object: null,
       shiny: true,
@@ -39,7 +33,6 @@ const pokeOffers = [
     },
     reciving: {
       name: 'Fuecoco',
-      sprite: '/pokemon/icons/1013_00_00_00.png',
       level: 100,
       object: null,
       mandatory: true,
@@ -49,8 +42,6 @@ const pokeOffers = [
   {
     giving: {
       name: 'Gyarados',
-      sprite:
-        'https://img.pokemondb.net/sprites/scarlet-violet/normal/gyarados.png',
       level: 100,
       object: null,
       shiny: false,
@@ -59,7 +50,6 @@ const pokeOffers = [
     },
     reciving: {
       name: 'Sprigatito',
-      sprite: '/pokemon/icons/1010_00_00_00.png',
       level: 100,
       object: null,
       shiny: true,
@@ -68,20 +58,13 @@ const pokeOffers = [
   {
     giving: {
       name: 'Tinkaton',
-      sprite: '/pokemon/icons/1106_00_00_00.png',
       level: 100,
       object: null,
       shiny: true,
       ivs: '31/31/31/31/31/31',
       evs: '252/252/4/0/0/0',
     },
-    reciving: {
-      name: 'Baxcalibur',
-      sprite: '/pokemon/icons/1055_00_00_00.png',
-      level: 100,
-      object: null,
-      shiny: false,
-    },
+    reciving: null,
   },
 ];
 
@@ -98,9 +81,6 @@ export default function TradePage() {
     const filtered = pokeOffers.filter(
       (offer) =>
         offer.giving.name.toLowerCase().includes(search.giving.toLowerCase()) &&
-        offer.reciving.name
-          .toLowerCase()
-          .includes(search.reciving.toLowerCase()) &&
         (!search.shiny || offer.giving.shiny === search.shiny)
     );
     setFilteredOffers(filtered);
