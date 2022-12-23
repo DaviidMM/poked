@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Characteristic from './Characteristic';
+import Characteristic from './CardCharacteristic';
 import ShinyIcon from './Icons/Shiny';
 import TradeModal from './TradeModal';
 

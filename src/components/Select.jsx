@@ -21,7 +21,7 @@ export default function Select({
       )}
       <select
         className={
-          'px-4 py-1 rounded-full border-2 border-red-900 font-semibold text-red-900 hover:bg-red-50 transition-colors outline-none' +
+          'px-4 py-1 rounded-full border-2 w-full border-red-900 font-semibold text-red-900 hover:bg-red-50 transition-colors outline-none' +
           (className ? ' ' + className : '')
         }
         value={value}
@@ -29,7 +29,11 @@ export default function Select({
         {...props}
       >
         {options.map((option) => (
-          <option key={option.value} value={option.value}>
+          <option
+            key={option.value}
+            value={option.value}
+            disabled={option.disabled}
+          >
             {option.label}
           </option>
         ))}

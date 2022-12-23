@@ -1,4 +1,4 @@
-export default function Characteristic({ label, value }) {
+export default function CardCharacteristic({ label, value }) {
   return (
     <div>
       <h2 className="text-lg font-semibold">{label}</h2>

@@ -35,11 +35,18 @@ export default function NewOfferModal({ open, closeModal }) {
             >
               <Dialog.Panel
                 className={
-                  'w-full max-w-xl overflow-hidden mx-auto text-red-900 transform bg-white shadow-xl rounded-2xl'
+                  'w-full max-w-3xl overflow-hidden mx-auto text-red-900 transform bg-white shadow-xl rounded-2xl'
                 }
               >
-                <Dialog.Title as="h1">New Offer</Dialog.Title>
-                <NewOfferForm />
+                <Dialog.Title
+                  as="h1"
+                  className="bg-red-600 text-2xl font-semibold text-white py-4"
+                >
+                  Crear anuncio de pokemon
+                </Dialog.Title>
+                <div className="dialog-body bg-white p-4">
+                  <NewOfferForm />
+                </div>
               </Dialog.Panel>
             </Transition.Child>
           </div>

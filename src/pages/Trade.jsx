@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
+import useTradeOffers from '../hooks/useTradeOffers';
+import tradeOffersStatuses from '../store/slices/tradeOffers/status';
 import TradeCard from '../components/TradeCard';
 import TradeSearchBar from '../components/TradeSearchBar';
 import Button from '../components/Button';
@@ -69,12 +71,13 @@ const pokeOffers = [
 ];
 
 export default function TradePage() {
+  const { offers, status: tradeOffersStatus } = useTradeOffers();
   const [search, setSearch] = useState({
     giving: '',
     reciving: '',
     shiny: false,
   });
-  const [filteredOffers, setFilteredOffers] = useState(pokeOffers);
+  const [filteredOffers, setFilteredOffers] = useState(offers);
   const [openNewOfferModal, setOpenNewOfferModal] = useState(false);
 
   useEffect(() => {
@@ -111,13 +114,15 @@ export default function TradePage() {
         </Button>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 w-full">
-        {filteredOffers.map((offer, index) => (
-          <TradeCard
-            key={index}
-            giving={offer.giving}
-            reciving={offer.reciving}
-          />
-        ))}
+        {tradeOffersStatus === tradeOffersStatuses.loaded &&
+          offers.length > 0 &&
+          filteredOffers.map((offer, index) => (
+            <TradeCard
+              key={index}
+              giving={offer.giving}
+              reciving={offer.reciving}
+            />
+          ))}
       </div>
     </div>
   );

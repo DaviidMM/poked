@@ -17,9 +17,13 @@ export const pokemonListSlice = createSlice({
       state.list = action.payload;
       state.status = status.loaded;
     },
+    setPokemonListLoading: (state) => {
+      state.status = status.loading;
+    },
   },
 });
 
-export const { addPokemon, setPokemonList } = pokemonListSlice.actions;
+export const { addPokemon, setPokemonList, setPokemonListLoading } =
+  pokemonListSlice.actions;
 
 export default pokemonListSlice.reducer;

@@ -6,19 +6,25 @@ import 'react-toastify/dist/ReactToastify.css';
 import { SignInUpModalProvider } from './context/SignInUpModal';
 import AppRouter from './router/AppRouter';
 import { useEffect } from 'react';
-import { getPokemonList } from './services/firebase/db/index.js';
-import { setPokemonList } from './store/slices/pokemonList/index.js';
 import { useDispatch } from 'react-redux';
-import useCheckAuth from './hooks/useCheckAuth.jsx';
+import useCheckAuth from './hooks/useCheckAuth';
+import { loadPokemonList } from './store/slices/pokemon/thunks';
+import useAuth from './hooks/useAuth';
+import { loadTradeOffers } from './store/slices/tradeOffers/thunks.js';
 
 function App() {
   useLanguage();
   useCheckAuth();
+  const auth = useAuth();
   const dispatch = useDispatch();
 
   useEffect(() => {
-    getPokemonList().then((list) => dispatch(setPokemonList(list)));
-  }, []);
+    if (auth.user) {
+      dispatch(loadPokemonList()).then(() => {
+        dispatch(loadTradeOffers());
+      });
+    }
+  }, [auth.user]);
 
   return (
     <>

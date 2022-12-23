@@ -3,7 +3,7 @@ import status from './status.js';
 
 const initialState = {
   user: null,
-  status: status.loading,
+  status: status.idle,
   token: null,
 };
 
@@ -12,7 +12,6 @@ export const authSlice = createSlice({
   initialState,
   reducers: {
     setUser: (state, action) => {
-      console.log('setUser', { action });
       state.user = action.payload.user;
       state.status = status.authenticated;
       state.token = action.payload.token;

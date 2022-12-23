@@ -1,7 +1,9 @@
 export default function Input({
   className,
-  label,
   id,
+  label,
+  max,
+  min,
   onChange,
   type,
   value,
@@ -21,9 +23,11 @@ export default function Input({
       <div className="border-2 border-red-900 rounded-xl w-full overflow-hidden relative">
         <input
           className="px-4 py-1.5 text-base outline-none w-full h-full peer z-20 relative bg-transparent focus:text-red-900 transition-colors"
-          type={type}
           id={id}
+          max={max}
+          min={min}
           onChange={onChange}
+          type={type}
           value={value}
           {...props}
         />
