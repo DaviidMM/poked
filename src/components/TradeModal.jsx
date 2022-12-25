@@ -2,10 +2,21 @@ import { Dialog, Transition } from '@headlessui/react';
 import { Fragment, useState } from 'react';
 import { FaQuestion } from 'react-icons/fa';
 import { TbArrowsLeftRight } from 'react-icons/tb';
-import Select from './Select.jsx';
+import usePokemon from '../hooks/usePokemon.jsx';
+import usePokemons from '../hooks/usePokemons';
+import Select from './Select';
+import pokemonListStatuses from '../store/slices/pokemon/status';
 
 export default function TradeModal({ open, closeModal, giving, reciving }) {
-  const [recivingPokemon, setRecivingPokemon] = useState(reciving);
+  const { list: pokemonList, status: pokemonListStatus } = usePokemons();
+  const [recivingPokemonNumber, setRecivingPokemonNumber] = useState(
+    reciving?.number || ''
+  );
+  const recivingPokemon = usePokemon({ pokemon: recivingPokemonNumber });
+
+  const handleRecivingPokemonChange = (e) => {
+    setRecivingPokemonNumber(e.target.value);
+  };
 
   return (
     <Transition appear show={open} as={Fragment}>
@@ -45,10 +56,7 @@ export default function TradeModal({ open, closeModal, giving, reciving }) {
                 <div className="flex flex-row justify-between items-center">
                   <div className="w-64">
                     <h1 className="text-2xl font-semibold">{giving.name}</h1>
-                    <img
-                      src={`/pokemon/icons/${giving.name}.png`}
-                      alt={giving.name}
-                    />
+                    <img src={giving.sprite} alt={giving.name} />
                   </div>
                   <TbArrowsLeftRight className="w-12 h-12" />
                   <div className="w-64 flex flex-col gap-4">
@@ -58,7 +66,7 @@ export default function TradeModal({ open, closeModal, giving, reciving }) {
                           {recivingPokemon.name}
                         </h1>
                         <img
-                          src={`/pokemon/icons/${recivingPokemon.name}.png`}
+                          src={recivingPokemon.sprite}
                           alt={recivingPokemon.name}
                         />
                       </>
@@ -66,14 +74,29 @@ export default function TradeModal({ open, closeModal, giving, reciving }) {
                       <FaQuestion className="w-full h-full p-16" />
                     )}
                     <Select
-                      value={recivingPokemon?.name}
-                      onChange={(e) =>
-                        setRecivingPokemon({ name: e.target.value })
+                      value={recivingPokemon?.number || -1}
+                      onChange={handleRecivingPokemonChange}
+                      options={
+                        pokemonListStatus === pokemonListStatuses.loaded
+                          ? [
+                              {
+                                value: -1,
+                                label: 'Select a pokemon',
+                                disabled: true,
+                              },
+                              ...pokemonList.map((p) => ({
+                                value: p.number,
+                                label: p.name,
+                              })),
+                            ]
+                          : [
+                              {
+                                value: -1,
+                                label: 'Loading...',
+                                disabled: true,
+                              },
+                            ]
                       }
-                      options={[
-                        { label: 'Magikarp', value: 'Magikarp' },
-                        { label: 'Pikachu', value: 'Pikachu' },
-                      ]}
                     />
                   </div>
                 </div>

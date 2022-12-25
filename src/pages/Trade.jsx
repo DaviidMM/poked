@@ -6,71 +6,11 @@ import TradeCard from '../components/TradeCard';
 import TradeSearchBar from '../components/TradeSearchBar';
 import Button from '../components/Button';
 import NewOfferModal from '../components/NewOfferModal';
-
-const pokeOffers = [
-  {
-    giving: {
-      name: 'Mewtwo',
-      level: 100,
-      object: null,
-      shiny: false,
-      ivs: '31/31/31/31/31/31',
-      evs: '252/252/4/0/0/0',
-    },
-    reciving: {
-      name: 'Charizard',
-      level: 100,
-      object: null,
-      shiny: false,
-    },
-  },
-  {
-    giving: {
-      name: 'Charmeleon',
-      level: 100,
-      object: null,
-      shiny: true,
-      ivs: '31/31/31/31/31/31',
-      evs: '252/252/4/0/0/0',
-    },
-    reciving: {
-      name: 'Fuecoco',
-      level: 100,
-      object: null,
-      mandatory: true,
-      shiny: false,
-    },
-  },
-  {
-    giving: {
-      name: 'Gyarados',
-      level: 100,
-      object: null,
-      shiny: false,
-      ivs: '31/31/31/31/31/31',
-      evs: '252/252/4/0/0/0',
-    },
-    reciving: {
-      name: 'Sprigatito',
-      level: 100,
-      object: null,
-      shiny: true,
-    },
-  },
-  {
-    giving: {
-      name: 'Tinkaton',
-      level: 100,
-      object: null,
-      shiny: true,
-      ivs: '31/31/31/31/31/31',
-      evs: '252/252/4/0/0/0',
-    },
-    reciving: null,
-  },
-];
+import usePokemons from '../hooks/usePokemons';
+import LoadingPokeball from '../components/Loading/Pokeball';
 
 export default function TradePage() {
+  const { list } = usePokemons();
   const { offers, status: tradeOffersStatus } = useTradeOffers();
   const [search, setSearch] = useState({
     giving: '',
@@ -81,13 +21,16 @@ export default function TradePage() {
   const [openNewOfferModal, setOpenNewOfferModal] = useState(false);
 
   useEffect(() => {
-    const filtered = pokeOffers.filter(
+    const filtered = offers.filter(
       (offer) =>
-        offer.giving.name.toLowerCase().includes(search.giving.toLowerCase()) &&
+        list
+          .find((pokemon) => pokemon.number === offer.giving.pokemon)
+          .name.toLowerCase()
+          .includes(search.giving.toLowerCase()) &&
         (!search.shiny || offer.giving.shiny === search.shiny)
     );
     setFilteredOffers(filtered);
-  }, [search]);
+  }, [offers, search]);
 
   const handleSearch = (e) => {
     const { name, value } = e.target;
@@ -98,7 +41,7 @@ export default function TradePage() {
   const handleCloseNewOfferModal = () => setOpenNewOfferModal(false);
 
   return (
-    <div className="flex flex-col gap-4 items-center justify-center max-w-3xl xl:max-w-[1400px] mx-auto h-full">
+    <div className="flex flex-col gap-6 items-center justify-center max-w-3xl xl:max-w-[1400px] mx-auto h-full">
       <NewOfferModal
         open={openNewOfferModal}
         closeModal={handleCloseNewOfferModal}
@@ -113,17 +56,32 @@ export default function TradePage() {
           Crear anuncio
         </Button>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 w-full">
-        {tradeOffersStatus === tradeOffersStatuses.loaded &&
-          offers.length > 0 &&
-          filteredOffers.map((offer, index) => (
-            <TradeCard
-              key={index}
-              giving={offer.giving}
-              reciving={offer.reciving}
-            />
-          ))}
-      </div>
+      {tradeOffersStatus === tradeOffersStatuses.loaded ? (
+        offers.length === 0 ? (
+          <div className="text-6xl mt-8 text-zinc-400">
+            No hay ofertas disponibles.
+            <Button
+              className="w-fit mt-8 mx-auto px-4 py-2 border-4"
+              color="red"
+              onClick={handleOpenNewOfferModal}
+            >
+              ¡Crea un anuncio!
+            </Button>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 w-full">
+            {filteredOffers.map((offer, index) => (
+              <TradeCard
+                key={index}
+                giving={offer.giving}
+                reciving={offer.reciving}
+              />
+            ))}
+          </div>
+        )
+      ) : (
+        <LoadingPokeball />
+      )}
     </div>
   );
 }

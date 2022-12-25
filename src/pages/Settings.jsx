@@ -14,7 +14,6 @@ export default function SettingsPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log({ language, currentLang });
     updateSettings({ ...settings, language });
     toast('Se han guardado los cambios', {
       icon: <Pokeball />,

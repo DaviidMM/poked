@@ -101,7 +101,7 @@ export default function SignInUpModal({ closeSignInUpModal, isOpen }) {
                       >
                         <img
                           className="h-7"
-                          src="/rotomdex.png"
+                          src="/assets/rotomdex.png"
                           alt="Rotomdex Icon"
                           title="Rotomdex"
                         />

@@ -29,7 +29,11 @@ export default function PasswordInput({
       >
         <img
           className="h-6"
-          src={showPassword ? '/gengar_open.png' : '/gengar_close.png'}
+          src={
+            showPassword
+              ? '/assets/gengar_open.png'
+              : '/assets/gengar_close.png'
+          }
           alt="Show password"
           title={t('general.show_password')}
         />

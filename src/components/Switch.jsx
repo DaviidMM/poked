@@ -1,6 +1,10 @@
-export default function Switch({ enabled, label, name, onChange }) {
+export default function Switch({ className, enabled, label, name, onChange }) {
   return (
-    <button className="flex flex-row gap-2" onClick={onChange} type="button">
+    <button
+      className={(className ? className + ' ' : '') + 'flex flex-row gap-2'}
+      onClick={onChange}
+      type="button"
+    >
       <input
         checked={enabled}
         className="hidden peer"

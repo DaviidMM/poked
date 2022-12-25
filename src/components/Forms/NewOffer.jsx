@@ -1,19 +1,38 @@
 import { useState } from 'react';
 import usePokemon from '../../hooks/usePokemon';
-import usePokemonList from '../../hooks/usePokemonList';
+import usePokemons from '../../hooks/usePokemons';
 import Select from '../Select';
 import pokemonListStatuses from '../../store/slices/pokemon/status';
+import itemListStatuses from '../../store/slices/items/status';
 import Switch from '../Switch';
 import Button from '../Button';
 import Input from '../Input';
+import Checkbox from '../Checkbox';
+import { toast } from 'react-toastify';
+import { createTradeOffer } from '../../services/firebase/db/index';
+import useItems from '../../hooks/useItems';
+import { useMemo } from 'react';
 
 export default function NewOfferForm() {
-  const { list, status } = usePokemonList();
+  const { list: pokemonList, status: pokemonListStatus } = usePokemons();
+  const { list: itemList, status: itemListStatus } = useItems();
+  const pokeballs = useMemo(
+    () => itemList.filter((i) => i.category === 'pokeBalls'),
+    [itemList]
+  );
+
   const [pokemonNumber, setPokemonNumber] = useState(-1);
-  const pokemon = usePokemon(pokemonNumber);
+  const pokemon = usePokemon({ pokemon: pokemonNumber });
   const [shiny, setShiny] = useState(false);
+  const [ball, setBall] = useState(
+    itemListStatus === itemListStatuses.loaded
+      ? pokeballs.find((p) => p.name === 'Poké Ball').id
+      : -1
+  );
   const [level, setLevel] = useState(100);
-  const [IVs, setIVs] = useState({
+  const [nature, setNature] = useState('');
+  const [item, setItem] = useState(-1);
+  const [ivs, setivs] = useState({
     hp: 31,
     atk: 31,
     def: 31,
@@ -21,7 +40,7 @@ export default function NewOfferForm() {
     spd: 31,
     spe: 31,
   });
-  const [EVs, setEVs] = useState({
+  const [evs, setevs] = useState({
     hp: 0,
     atk: 0,
     def: 0,
@@ -30,29 +49,68 @@ export default function NewOfferForm() {
     spe: 0,
   });
 
-  const handleIVsChange = (e) => {
+  const handleShinyChange = () => setShiny(!shiny);
+  const handlePokemonChange = (e) => setPokemonNumber(e.target.value);
+  const handleBallChange = (e) => setBall(Number(e.target.value));
+  const handleLevelChange = (e) => setLevel(Number(e.target.value));
+  const handleNatureChange = (e) => setNature(e.target.value);
+  const handleItemChange = (e) => setItem(Number(e.target.value));
+
+  const handleIvsChange = (e) => {
     const { name, checked } = e.target;
-    setIVs((prev) => ({ ...prev, [name]: checked ? 31 : 0 }));
+    setivs((prev) => ({ ...prev, [name]: checked ? 31 : 0 }));
   };
 
-  const handleEVsChange = (e) => {
+  const handleEvsChange = (e) => {
     const { name, value } = e.target;
-    setEVs((prev) => ({ ...prev, [name]: value }));
+    // Calculate total evs without the current stat
+    const totalEvs = Object.entries(evs)
+      .filter(([stat]) => stat !== name)
+      .reduce((acc, [, ev]) => acc + ev, 0);
+    if (totalEvs + Number(value) > 510) {
+      return toast.error('No se puede superar los 510 evs totales');
+    }
+    setevs((prev) => ({ ...prev, [name]: Number(value) }));
+  };
+
+  const handlePostOffer = (e) => {
+    e.preventDefault();
+    console.log('submit');
+    createTradeOffer({
+      giving: {
+        pokemon: pokemon.number,
+        shiny,
+        ball,
+        level,
+        nature,
+        item,
+        ivs,
+        evs,
+      },
+    })
+      .then((createdOffer) => {
+        console.log({ createdOffer });
+        toast.success('Oferta creada con éxito');
+      })
+      .catch((err) => {
+        toast.error('Error al publicar el pokemon');
+        console.error(err);
+      });
   };
 
   return (
-    <form className="flex flex-col gap-8">
+    <form className="flex flex-col gap-8" onSubmit={handlePostOffer}>
       <Select
         label="Selecciona el pokemon que quieres intercambiar"
         name="pokemon"
         value={pokemonNumber}
-        onChange={(e) => setPokemonNumber(e.target.value)}
+        onChange={handlePokemonChange}
         options={
-          status === pokemonListStatuses.loading
+          pokemonListStatus === pokemonListStatuses.loading
             ? [{ value: -1, label: 'Cargando...' }]
             : [
                 { value: -1, label: 'Selecciona un pokemon', disabled: true },
-                ...list.map((pokemon) => ({
+                ...pokemonList.map((pokemon) => ({
                   value: pokemon.number,
                   label: pokemon.name,
                 })),
@@ -63,162 +121,229 @@ export default function NewOfferForm() {
       {pokemon ? (
         <div className="flex flex-row gap-8">
           <img className="h-48" src={pokemon.sprite} alt={pokemon.name} />
-          <div className="w-full h-fit border-2 border-red-900 p-4 rounded-xl grid grid-cols-2 gap-2">
-            <div>
-              <label className="block mb-2 text-left">Shiny</label>
-              <Switch
-                id="shiny"
-                name="shiny"
-                enabled={shiny}
-                onChange={() => setShiny(!shiny)}
+          <div className="w-full h-fit border-2 border-red-900 p-4 rounded-xl grid grid-cols-2 gap-4">
+            <div className="flex flex-row justify-between gap-4 col-span-2">
+              <div className="flex flex-col gap-3.5">
+                <label className="block text-left">Shiny</label>
+                <Switch
+                  id="shiny"
+                  name="shiny"
+                  enabled={shiny}
+                  onChange={handleShinyChange}
+                />
+              </div>
+              <Select
+                className="w-full"
+                label="Ball"
+                name="ball"
+                options={
+                  itemListStatus === itemListStatuses.loaded
+                    ? pokeballs.map((p) => ({ value: p.id, label: p.name }))
+                    : [{ value: -1, label: 'Cargando...', disabled: true }]
+                }
+                value={ball}
+                onChange={handleBallChange}
+              />
+              <Select
+                className="w-full"
+                label="Naturaleza"
+                name="nature"
+                options={[
+                  {
+                    value: '',
+                    label: 'Seleccionar',
+                    disabled: true,
+                  },
+                  { value: 'hasty', label: 'Activa' },
+                  { value: 'mild', label: 'Afable' },
+                  { value: 'impish', label: 'Agitada' },
+                  { value: 'jolly', label: 'Alegre' },
+                  { value: 'rash', label: 'Alocada' },
+                  { value: 'gentle', label: 'Amable' },
+                  { value: 'brave', label: 'Audaz' },
+                  { value: 'careful', label: 'Cauta' },
+                  { value: 'docile', label: 'Dócil' },
+                  { value: 'adamant', label: 'Firme' },
+                  { value: 'lax', label: 'Floja' },
+                  { value: 'hardy', label: 'Fuerte' },
+                  { value: 'sassy', label: 'Grosera' },
+                  { value: 'lonely', label: 'Huraña' },
+                  { value: 'naive', label: 'Ingenua' },
+                  { value: 'quiet', label: 'Mansa' },
+                  { value: 'timid', label: 'Miedosa' },
+                  { value: 'modest', label: 'Modesta' },
+                  { value: 'bold', label: 'Osada' },
+                  { value: 'naughty', label: 'Pícara' },
+                  { value: 'relaxed', label: 'Plácida' },
+                  { value: 'quirky', label: 'Rara' },
+                  { value: 'calm', label: 'Serena' },
+                  { value: 'serious', label: 'Seria' },
+                  { value: 'bashful', label: 'Tímida' },
+                ]}
+                onChange={handleNatureChange}
+                value={nature}
+              />
+              <Input
+                label="Nivel"
+                name="level"
+                type="number"
+                value={level}
+                onChange={handleLevelChange}
               />
             </div>
-            <Input
-              label="Nivel"
-              name="level"
-              type="number"
-              value={level}
-              onChange={(e) => setLevel(e.target.value)}
-            />
             <Select
+              className="flex flex-col justify-between"
               label="Objeto"
               name="item"
-              options={[
-                { value: -1, label: 'Ninguno', disabled: true },
-                { value: 0, label: 'Pokeball' },
-                { value: 1, label: 'Greatball' },
-                { value: 2, label: 'Ultraball' },
-              ]}
+              options={
+                itemListStatus === itemListStatuses.loaded
+                  ? [
+                      { value: -1, label: 'Ninguno' },
+                      ...itemList.map((i) => ({ value: i.id, label: i.name })),
+                    ]
+                  : [{ value: -1, label: 'Cargando...', disabled: true }]
+              }
+              value={item}
+              onChange={handleItemChange}
             />
-            <div className="flex flex-row justify-between">
-              <div className="flex flex-col gap-4">
-                <label htmlFor="hp">HP</label>
-                <input
-                  type="checkbox"
-                  name="hp"
-                  id="hp"
-                  checked={IVs.hp === 31}
-                  onChange={handleIVsChange}
-                />
-              </div>
-              <div className="flex flex-col gap-4">
-                <label htmlFor="atk">Atk</label>
-                <input
-                  type="checkbox"
-                  name="atk"
-                  id="atk"
-                  checked={IVs.atk === 31}
-                  onChange={handleIVsChange}
-                />
-              </div>
-              <div className="flex flex-col gap-4">
-                <label htmlFor="def">Def</label>
-                <input
-                  type="checkbox"
-                  name="def"
-                  id="def"
-                  checked={IVs.def === 31}
-                  onChange={handleIVsChange}
-                />
-              </div>
-              <div className="flex flex-col gap-4">
-                <label htmlFor="spa">SpA</label>
-                <input
-                  type="checkbox"
-                  name="spa"
-                  id="spa"
-                  checked={IVs.spa === 31}
-                  onChange={handleIVsChange}
-                />
-              </div>
-              <div className="flex flex-col gap-4">
-                <label htmlFor="spd">SpD</label>
-                <input
-                  type="checkbox"
-                  name="spd"
-                  id="spd"
-                  checked={IVs.spd === 31}
-                  onChange={handleIVsChange}
-                />
-              </div>
-              <div className="flex flex-col gap-4">
-                <label htmlFor="spe">Spe</label>
-                <input
-                  type="checkbox"
-                  name="spe"
-                  id="spe"
-                  checked={IVs.spe === 31}
-                  onChange={handleIVsChange}
-                />
+            <div className="flex flex-col gap-2">
+              <label>ivs</label>
+              <div className="flex flex-row justify-between pb-2">
+                <div className="flex flex-col gap-2 items-center">
+                  <label htmlFor="hp">HP</label>
+                  <Checkbox
+                    name="hp"
+                    id="hp"
+                    checked={ivs.hp === 31}
+                    onChange={handleIvsChange}
+                  />
+                </div>
+                <div className="flex flex-col gap-2 items-center">
+                  <label htmlFor="atk">Atk</label>
+                  <Checkbox
+                    name="atk"
+                    id="atk"
+                    checked={ivs.atk === 31}
+                    onChange={handleIvsChange}
+                  />
+                </div>
+                <div className="flex flex-col gap-2 items-center">
+                  <label htmlFor="def">Def</label>
+                  <Checkbox
+                    name="def"
+                    id="def"
+                    checked={ivs.def === 31}
+                    onChange={handleIvsChange}
+                  />
+                </div>
+                <div className="flex flex-col gap-2 items-center">
+                  <label htmlFor="spa">SpA</label>
+                  <Checkbox
+                    name="spa"
+                    id="spa"
+                    checked={ivs.spa === 31}
+                    onChange={handleIvsChange}
+                  />
+                </div>
+                <div className="flex flex-col gap-2 items-center">
+                  <label htmlFor="spd">SpD</label>
+                  <Checkbox
+                    name="spd"
+                    id="spd"
+                    checked={ivs.spd === 31}
+                    onChange={handleIvsChange}
+                  />
+                </div>
+                <div className="flex flex-col gap-2 items-center">
+                  <label htmlFor="spe">Spe</label>
+                  <Checkbox
+                    name="spe"
+                    id="spe"
+                    checked={ivs.spe === 31}
+                    onChange={handleIvsChange}
+                  />
+                </div>
               </div>
             </div>
             <div className="col-span-2 flex flex-col">
-              <label htmlFor="evs">EVs</label>
+              <label>evs</label>
               <div className="flex flex-row justify-between gap-2">
-                <div className="flex flex-col gap-4">
-                  <label htmlFor="hp">HP</label>
+                <div className="flex flex-col gap-2 items-center">
+                  <label>HP</label>
                   <Input
+                    className="[&_input]:text-center"
                     type="number"
                     name="hp"
                     max="252"
+                    min="0"
                     id="hp"
-                    value={EVs.hp}
-                    onChange={handleEVsChange}
+                    value={evs.hp}
+                    onChange={handleEvsChange}
                   />
                 </div>
-                <div className="flex flex-col gap-4">
-                  <label htmlFor="atk">Atk</label>
+                <div className="flex flex-col gap-2 items-center">
+                  <label>Atk</label>
                   <Input
+                    className="[&_input]:text-center"
                     type="number"
                     name="atk"
                     max="252"
+                    min="0"
                     id="atk"
-                    value={EVs.atk}
-                    onChange={handleEVsChange}
+                    value={evs.atk}
+                    onChange={handleEvsChange}
                   />
                 </div>
-                <div className="flex flex-col gap-4">
-                  <label htmlFor="def">Def</label>
+                <div className="flex flex-col gap-2 items-center">
+                  <label>Def</label>
                   <Input
+                    className="[&_input]:text-center"
                     type="number"
                     name="def"
                     max="252"
+                    min="0"
                     id="def"
-                    value={EVs.def}
-                    onChange={handleEVsChange}
+                    value={evs.def}
+                    onChange={handleEvsChange}
                   />
                 </div>
-                <div className="flex flex-col gap-4">
-                  <label htmlFor="spa">SpA</label>
+                <div className="flex flex-col gap-2 items-center">
+                  <label>SpA</label>
                   <Input
+                    className="[&_input]:text-center"
                     type="number"
                     name="spa"
                     max="252"
+                    min="0"
                     id="spa"
-                    value={EVs.spa}
-                    onChange={handleEVsChange}
+                    value={evs.spa}
+                    onChange={handleEvsChange}
                   />
                 </div>
-                <div className="flex flex-col gap-4">
-                  <label htmlFor="spd">SpD</label>
+                <div className="flex flex-col gap-2 items-center">
+                  <label>SpD</label>
                   <Input
+                    className="[&_input]:text-center"
                     type="number"
                     name="spd"
                     max="252"
+                    min="0"
                     id="spd"
-                    value={EVs.spd}
-                    onChange={handleEVsChange}
+                    value={evs.spd}
+                    onChange={handleEvsChange}
                   />
                 </div>
-                <div className="flex flex-col gap-4">
-                  <label htmlFor="spe">Spe</label>
+                <div className="flex flex-col gap-2 items-center">
+                  <label>Spe</label>
                   <Input
+                    className="[&_input]:text-center"
                     type="number"
                     name="spe"
                     max="252"
+                    min="0"
                     id="spe"
-                    value={EVs.spe}
-                    onChange={handleEVsChange}
+                    value={evs.spe}
+                    onChange={handleEvsChange}
                   />
                 </div>
               </div>

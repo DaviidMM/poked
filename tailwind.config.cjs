@@ -5,6 +5,8 @@ module.exports = {
     extend: {
       animation: {
         shake: 'shake 0.5s cubic-bezier(.36,.07,.19,.97) both',
+        checkmark: 'checkmark .2s ease-in-out',
+        'undo-checkmark': 'undo-checkmark .2s ease-in-out',
       },
       backgroundSize: {
         'size-200': '200% 200%',
@@ -22,6 +24,38 @@ module.exports = {
           },
           '40%, 60%': { transform: 'rotate(-5deg)' },
           '0%, 100%': { transform: 'rotate(0)' },
+        },
+        checkmark: {
+          '0%': {
+            height: '0',
+            width: '0',
+          },
+
+          '50%': {
+            height: '0',
+            width: '45%',
+          },
+
+          '100%': {
+            height: '80%',
+            width: '45%',
+          },
+        },
+        'undo-checkmark': {
+          '0%': {
+            height: '66.6666666666666%',
+            width: '33.3333333333333%',
+            opacity: 1,
+          },
+          '50%': {
+            height: '0',
+            width: '33.3333333333333%',
+          },
+          '100%': {
+            height: '0',
+            width: '0',
+            opacity: 0,
+          },
         },
       },
     },

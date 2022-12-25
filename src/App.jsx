@@ -11,6 +11,7 @@ import useCheckAuth from './hooks/useCheckAuth';
 import { loadPokemonList } from './store/slices/pokemon/thunks';
 import useAuth from './hooks/useAuth';
 import { loadTradeOffers } from './store/slices/tradeOffers/thunks.js';
+import { loadItems } from './store/slices/items/thunks.js';
 
 function App() {
   useLanguage();
@@ -20,9 +21,9 @@ function App() {
 
   useEffect(() => {
     if (auth.user) {
-      dispatch(loadPokemonList()).then(() => {
-        dispatch(loadTradeOffers());
-      });
+      dispatch(loadPokemonList())
+        .then(() => dispatch(loadItems()))
+        .then(() => dispatch(loadTradeOffers()));
     }
   }, [auth.user]);
 
