@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import usePokemon from '../../hooks/usePokemon';
-import { mapEVsToString, mapIVsToString } from '../../utils/index.js';
+import { mapEVsToString, mapIVsToString } from '../../utils';
 import Characteristic from '../CardCharacteristic';
 import TradeModal from '../TradeModal';
-import PokemonMeta from './Meta.jsx';
+import PokemonMeta from './Meta';
 
 export default function TradeCard({ giving, reciving }) {
   const [modalOpen, setModalOpen] = useState(false);

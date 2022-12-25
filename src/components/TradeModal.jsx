@@ -3,12 +3,12 @@ import { Fragment, useState } from 'react';
 import { FaQuestion } from 'react-icons/fa';
 import { TbArrowsLeftRight } from 'react-icons/tb';
 import usePokemon from '../hooks/usePokemon.jsx';
-import usePokemons from '../hooks/usePokemons';
+import usePokemonList from '../hooks/usePokemonList';
 import Select from './Select';
 import pokemonListStatuses from '../store/slices/pokemon/status';
 
 export default function TradeModal({ open, closeModal, giving, reciving }) {
-  const { list: pokemonList, status: pokemonListStatus } = usePokemons();
+  const { list: pokemonList, status: pokemonListStatus } = usePokemonList();
   const [recivingPokemonNumber, setRecivingPokemonNumber] = useState(
     reciving?.number || ''
   );

@@ -45,7 +45,7 @@ export default function NewOfferModal({ open, closeModal }) {
                   Crear anuncio de pokemon
                 </Dialog.Title>
                 <div className="dialog-body bg-white p-4">
-                  <NewOfferForm />
+                  <NewOfferForm closeModal={closeModal} />
                 </div>
               </Dialog.Panel>
             </Transition.Child>

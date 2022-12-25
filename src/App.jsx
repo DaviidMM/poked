@@ -10,8 +10,8 @@ import { useDispatch } from 'react-redux';
 import useCheckAuth from './hooks/useCheckAuth';
 import { loadPokemonList } from './store/slices/pokemon/thunks';
 import useAuth from './hooks/useAuth';
-import { loadTradeOffers } from './store/slices/tradeOffers/thunks.js';
-import { loadItems } from './store/slices/items/thunks.js';
+import { loadItems } from './store/slices/items/thunks';
+import { loadTradeOffers } from './store/slices/tradeOffers/thunks';
 
 function App() {
   useLanguage();
@@ -21,9 +21,9 @@ function App() {
 
   useEffect(() => {
     if (auth.user) {
-      dispatch(loadPokemonList())
+      dispatch(loadTradeOffers())
         .then(() => dispatch(loadItems()))
-        .then(() => dispatch(loadTradeOffers()));
+        .then(() => dispatch(loadPokemonList()));
     }
   }, [auth.user]);
 

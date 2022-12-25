@@ -12,18 +12,30 @@ export const tradeOffersSlice = createSlice({
   reducers: {
     addOffer: (state, action) => {
       state.offers.push(action.payload);
+      state.status = status.loaded;
     },
     setOffers: (state, action) => {
       state.offers = action.payload;
       state.status = status.loaded;
     },
+    setLoadedOffers: (state) => {
+      state.status = status.loaded;
+    },
     setLoadingOffers: (state) => {
       state.status = status.loading;
+    },
+    setCreatingOffer: (state) => {
+      state.status = status.creating;
     },
   },
 });
 
-export const { addOffer, setOffers, setLoadingOffers } =
-  tradeOffersSlice.actions;
+export const {
+  addOffer,
+  setCreatingOffer,
+  setLoadedOffers,
+  setLoadingOffers,
+  setOffers,
+} = tradeOffersSlice.actions;
 
 export default tradeOffersSlice.reducer;

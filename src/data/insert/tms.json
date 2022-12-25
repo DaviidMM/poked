@@ -1,0 +1,857 @@
+[
+  {
+    "name": "Acid Spray",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0410.png",
+    "type": "poison"
+  },
+  {
+    "name": "Acrobatics",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0361.png",
+    "type": "flying"
+  },
+  {
+    "name": "Aerial Ace",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0361.png",
+    "type": "flying"
+  },
+  {
+    "name": "Agility",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0331.png",
+    "type": "psychic"
+  },
+  {
+    "name": "Air Cutter",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0361.png",
+    "type": "flying"
+  },
+  {
+    "name": "Air Slash",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0361.png",
+    "type": "flying"
+  },
+  {
+    "name": "Amnesia",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0331.png",
+    "type": "psychic"
+  },
+  {
+    "name": "Aura Sphere",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0366.png",
+    "type": "fighting"
+  },
+  {
+    "name": "Avalanche",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0396.png",
+    "type": "ice"
+  },
+  {
+    "name": "Baton Pass",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0393.png",
+    "type": "normal"
+  },
+  {
+    "name": "Blast Burn",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0376.png",
+    "type": "fire"
+  },
+  {
+    "name": "Blizzard",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0396.png",
+    "type": "ice"
+  },
+  {
+    "name": "Body Press",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0366.png",
+    "type": "fighting"
+  },
+  {
+    "name": "Body Slam",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0393.png",
+    "type": "normal"
+  },
+  {
+    "name": "Brave Bird",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0361.png",
+    "type": "flying"
+  },
+  {
+    "name": "Brick Break",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0366.png",
+    "type": "fighting"
+  },
+  {
+    "name": "Bug Buzz",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0348.png",
+    "type": "bug"
+  },
+  {
+    "name": "Bulk Up",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0366.png",
+    "type": "fighting"
+  },
+  {
+    "name": "Bulldoze",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0382.png",
+    "type": "ground"
+  },
+  {
+    "name": "Bullet Seed",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0347.png",
+    "type": "grass"
+  },
+  {
+    "name": "Calm Mind",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0331.png",
+    "type": "psychic"
+  },
+  {
+    "name": "Charge Beam",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0399.png",
+    "type": "electric"
+  },
+  {
+    "name": "Charm",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0329.png",
+    "type": "fairy"
+  },
+  {
+    "name": "Chilling Water",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0377.png",
+    "type": "water"
+  },
+  {
+    "name": "Close Combat",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0366.png",
+    "type": "fighting"
+  },
+  {
+    "name": "Confuse Ray",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0344.png",
+    "type": "ghost"
+  },
+  {
+    "name": "Crunch",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0345.png",
+    "type": "dark"
+  },
+  {
+    "name": "Dark Pulse",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0345.png",
+    "type": "dark"
+  },
+  {
+    "name": "Dazzling Gleam",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0329.png",
+    "type": "fairy"
+  },
+  {
+    "name": "Dig",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0382.png",
+    "type": "ground"
+  },
+  {
+    "name": "Disarming Voice",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0329.png",
+    "type": "fairy"
+  },
+  {
+    "name": "Draco Meteor",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0405.png",
+    "type": "dragon"
+  },
+  {
+    "name": "Dragon Claw",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0405.png",
+    "type": "dragon"
+  },
+  {
+    "name": "Dragon Dance",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0405.png",
+    "type": "dragon"
+  },
+  {
+    "name": "Dragon Pulse",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0405.png",
+    "type": "dragon"
+  },
+  {
+    "name": "Dragon Tail",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0405.png",
+    "type": "dragon"
+  },
+  {
+    "name": "Drain Punch",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0366.png",
+    "type": "fighting"
+  },
+  {
+    "name": "Draining Kiss",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0329.png",
+    "type": "fairy"
+  },
+  {
+    "name": "Drill Run",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0382.png",
+    "type": "ground"
+  },
+  {
+    "name": "Earth Power",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0382.png",
+    "type": "ground"
+  },
+  {
+    "name": "Earthquake",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0382.png",
+    "type": "ground"
+  },
+  {
+    "name": "Eerie Impulse",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0399.png",
+    "type": "electric"
+  },
+  {
+    "name": "Electric Terrain",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0399.png",
+    "type": "electric"
+  },
+  {
+    "name": "Electro Ball",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0399.png",
+    "type": "electric"
+  },
+  {
+    "name": "Encore",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0393.png",
+    "type": "normal"
+  },
+  {
+    "name": "Endure",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0393.png",
+    "type": "normal"
+  },
+  {
+    "name": "Energy Ball",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0347.png",
+    "type": "grass"
+  },
+  {
+    "name": "Facade",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0393.png",
+    "type": "normal"
+  },
+  {
+    "name": "Fake Tears",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0345.png",
+    "type": "dark"
+  },
+  {
+    "name": "False Swipe",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0393.png",
+    "type": "normal"
+  },
+  {
+    "name": "Fire Blast",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0376.png",
+    "type": "fire"
+  },
+  {
+    "name": "Fire Fang",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0376.png",
+    "type": "fire"
+  },
+  {
+    "name": "Fire Pledge",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0376.png",
+    "type": "fire"
+  },
+  {
+    "name": "Fire Punch",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0376.png",
+    "type": "fire"
+  },
+  {
+    "name": "Fire Spin",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0376.png",
+    "type": "fire"
+  },
+  {
+    "name": "Flame Charge",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0376.png",
+    "type": "fire"
+  },
+  {
+    "name": "Flamethrower",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0376.png",
+    "type": "fire"
+  },
+  {
+    "name": "Flare Blitz",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0376.png",
+    "type": "fire"
+  },
+  {
+    "name": "Flash Cannon",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0380.png",
+    "type": "steel"
+  },
+  {
+    "name": "Fling",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0345.png",
+    "type": "dark"
+  },
+  {
+    "name": "Fly",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0361.png",
+    "type": "flying"
+  },
+  {
+    "name": "Focus Blast",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0366.png",
+    "type": "fighting"
+  },
+  {
+    "name": "Foul Play",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0345.png",
+    "type": "dark"
+  },
+  {
+    "name": "Frenzy Plant",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0347.png",
+    "type": "grass"
+  },
+  {
+    "name": "Giga Drain",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0347.png",
+    "type": "grass"
+  },
+  {
+    "name": "Giga Impact",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0393.png",
+    "type": "normal"
+  },
+  {
+    "name": "Grass Knot",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0347.png",
+    "type": "grass"
+  },
+  {
+    "name": "Grass Pledge",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0347.png",
+    "type": "grass"
+  },
+  {
+    "name": "Grassy Terrain",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0347.png",
+    "type": "grass"
+  },
+  {
+    "name": "Gunk Shot",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0410.png",
+    "type": "poison"
+  },
+  {
+    "name": "Heat Wave",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0376.png",
+    "type": "fire"
+  },
+  {
+    "name": "Heavy Slam",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0380.png",
+    "type": "steel"
+  },
+  {
+    "name": "Helping Hand",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0393.png",
+    "type": "normal"
+  },
+  {
+    "name": "Hex",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0344.png",
+    "type": "ghost"
+  },
+  {
+    "name": "Hurricane",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0361.png",
+    "type": "flying"
+  },
+  {
+    "name": "Hydro Cannon",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0377.png",
+    "type": "water"
+  },
+  {
+    "name": "Hydro Pump",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0377.png",
+    "type": "water"
+  },
+  {
+    "name": "Hyper Beam",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0393.png",
+    "type": "normal"
+  },
+  {
+    "name": "Hyper Voice",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0393.png",
+    "type": "normal"
+  },
+  {
+    "name": "Ice Beam",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0396.png",
+    "type": "ice"
+  },
+  {
+    "name": "Ice Fang",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0396.png",
+    "type": "ice"
+  },
+  {
+    "name": "Ice Punch",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0396.png",
+    "type": "ice"
+  },
+  {
+    "name": "Ice Spinner",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0396.png",
+    "type": "ice"
+  },
+  {
+    "name": "Icy Wind",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0396.png",
+    "type": "ice"
+  },
+  {
+    "name": "Imprison",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0331.png",
+    "type": "psychic"
+  },
+  {
+    "name": "Iron Defense",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0380.png",
+    "type": "steel"
+  },
+  {
+    "name": "Iron Head",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0380.png",
+    "type": "steel"
+  },
+  {
+    "name": "Leaf Storm",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0347.png",
+    "type": "grass"
+  },
+  {
+    "name": "Leech Life",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0348.png",
+    "type": "bug"
+  },
+  {
+    "name": "Light Screen",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0331.png",
+    "type": "psychic"
+  },
+  {
+    "name": "Liquidation",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0377.png",
+    "type": "water"
+  },
+  {
+    "name": "Low Kick",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0366.png",
+    "type": "fighting"
+  },
+  {
+    "name": "Low Sweep",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0366.png",
+    "type": "fighting"
+  },
+  {
+    "name": "Magical Leaf",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0347.png",
+    "type": "grass"
+  },
+  {
+    "name": "Metal Claw",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0380.png",
+    "type": "steel"
+  },
+  {
+    "name": "Metronome",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0393.png",
+    "type": "normal"
+  },
+  {
+    "name": "Misty Terrain",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0329.png",
+    "type": "fairy"
+  },
+  {
+    "name": "Mud Shot",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0382.png",
+    "type": "ground"
+  },
+  {
+    "name": "Mud-Slap",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0382.png",
+    "type": "ground"
+  },
+  {
+    "name": "Nasty Plot",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0345.png",
+    "type": "dark"
+  },
+  {
+    "name": "Night Shade",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0344.png",
+    "type": "ghost"
+  },
+  {
+    "name": "Outrage",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0405.png",
+    "type": "dragon"
+  },
+  {
+    "name": "Overheat",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0376.png",
+    "type": "fire"
+  },
+  {
+    "name": "Phantom Force",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0344.png",
+    "type": "ghost"
+  },
+  {
+    "name": "Play Rough",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0329.png",
+    "type": "fairy"
+  },
+  {
+    "name": "Poison Jab",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0410.png",
+    "type": "poison"
+  },
+  {
+    "name": "Poison Tail",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0410.png",
+    "type": "poison"
+  },
+  {
+    "name": "Pollen Puff",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0348.png",
+    "type": "bug"
+  },
+  {
+    "name": "Pounce",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0348.png",
+    "type": "bug"
+  },
+  {
+    "name": "Power Gem",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0363.png",
+    "type": "rock"
+  },
+  {
+    "name": "Protect",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0393.png",
+    "type": "normal"
+  },
+  {
+    "name": "Psybeam",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0331.png",
+    "type": "psychic"
+  },
+  {
+    "name": "Psychic",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0331.png",
+    "type": "psychic"
+  },
+  {
+    "name": "Psychic Fangs",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0331.png",
+    "type": "psychic"
+  },
+  {
+    "name": "Psychic Terrain",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0331.png",
+    "type": "psychic"
+  },
+  {
+    "name": "Psyshock",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0331.png",
+    "type": "psychic"
+  },
+  {
+    "name": "Rain Dance",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0377.png",
+    "type": "water"
+  },
+  {
+    "name": "Reflect",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0331.png",
+    "type": "psychic"
+  },
+  {
+    "name": "Rest",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0331.png",
+    "type": "psychic"
+  },
+  {
+    "name": "Reversal",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0366.png",
+    "type": "fighting"
+  },
+  {
+    "name": "Rock Blast",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0363.png",
+    "type": "rock"
+  },
+  {
+    "name": "Rock Slide",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0363.png",
+    "type": "rock"
+  },
+  {
+    "name": "Rock Tomb",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0363.png",
+    "type": "rock"
+  },
+  {
+    "name": "Sandstorm",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0363.png",
+    "type": "rock"
+  },
+  {
+    "name": "Scary Face",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0393.png",
+    "type": "normal"
+  },
+  {
+    "name": "Seed Bomb",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0347.png",
+    "type": "grass"
+  },
+  {
+    "name": "Shadow Ball",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0344.png",
+    "type": "ghost"
+  },
+  {
+    "name": "Shadow Claw",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0344.png",
+    "type": "ghost"
+  },
+  {
+    "name": "Skill Swap",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0331.png",
+    "type": "psychic"
+  },
+  {
+    "name": "Sleep Talk",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0393.png",
+    "type": "normal"
+  },
+  {
+    "name": "Sludge Bomb",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0410.png",
+    "type": "poison"
+  },
+  {
+    "name": "Smart Strike",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0380.png",
+    "type": "steel"
+  },
+  {
+    "name": "Snarl",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0345.png",
+    "type": "dark"
+  },
+  {
+    "name": "Snowscape",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0396.png",
+    "type": "ice"
+  },
+  {
+    "name": "Solar Beam",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0347.png",
+    "type": "grass"
+  },
+  {
+    "name": "Spikes",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0382.png",
+    "type": "ground"
+  },
+  {
+    "name": "Stealth Rock",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0363.png",
+    "type": "rock"
+  },
+  {
+    "name": "Steel Beam",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0380.png",
+    "type": "steel"
+  },
+  {
+    "name": "Stomping Tantrum",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0382.png",
+    "type": "ground"
+  },
+  {
+    "name": "Stone Edge",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0363.png",
+    "type": "rock"
+  },
+  {
+    "name": "Stored Power",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0331.png",
+    "type": "psychic"
+  },
+  {
+    "name": "Struggle Bug",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0348.png",
+    "type": "bug"
+  },
+  {
+    "name": "Substitute",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0393.png",
+    "type": "normal"
+  },
+  {
+    "name": "Sunny Day",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0376.png",
+    "type": "fire"
+  },
+  {
+    "name": "Surf",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0377.png",
+    "type": "water"
+  },
+  {
+    "name": "Swift",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0393.png",
+    "type": "normal"
+  },
+  {
+    "name": "Swords Dance",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0393.png",
+    "type": "normal"
+  },
+  {
+    "name": "Tailwind",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0361.png",
+    "type": "flying"
+  },
+  {
+    "name": "Take Down",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0393.png",
+    "type": "normal"
+  },
+  {
+    "name": "Taunt",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0345.png",
+    "type": "dark"
+  },
+  {
+    "name": "Tera Blast",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0393.png",
+    "type": "normal"
+  },
+  {
+    "name": "Thief",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0345.png",
+    "type": "dark"
+  },
+  {
+    "name": "Thunder",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0399.png",
+    "type": "electric"
+  },
+  {
+    "name": "Thunder Fang",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0399.png",
+    "type": "electric"
+  },
+  {
+    "name": "Thunder Punch",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0399.png",
+    "type": "electric"
+  },
+  {
+    "name": "Thunder Wave",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0399.png",
+    "type": "electric"
+  },
+  {
+    "name": "Thunderbolt",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0399.png",
+    "type": "electric"
+  },
+  {
+    "name": "Toxic Spikes",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0410.png",
+    "type": "poison"
+  },
+  {
+    "name": "Trailblaze",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0347.png",
+    "type": "grass"
+  },
+  {
+    "name": "Trick",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0331.png",
+    "type": "psychic"
+  },
+  {
+    "name": "Trick Room",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0331.png",
+    "type": "psychic"
+  },
+  {
+    "name": "U-turn",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0348.png",
+    "type": "bug"
+  },
+  {
+    "name": "Venoshock",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0410.png",
+    "type": "poison"
+  },
+  {
+    "name": "Volt Switch",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0399.png",
+    "type": "electric"
+  },
+  {
+    "name": "Water Pledge",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0377.png",
+    "type": "water"
+  },
+  {
+    "name": "Water Pulse",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0377.png",
+    "type": "water"
+  },
+  {
+    "name": "Waterfall",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0377.png",
+    "type": "water"
+  },
+  {
+    "name": "Wild Charge",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0399.png",
+    "type": "electric"
+  },
+  {
+    "name": "Will-O-Wisp",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0376.png",
+    "type": "fire"
+  },
+  {
+    "name": "X-Scissor",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0348.png",
+    "type": "bug"
+  },
+  {
+    "name": "Zen Headbutt",
+    "image": "https://www.gamerguides.com/assets/media/resize60x60/18/172/item_0331.png",
+    "type": "psychic"
+  }
+]

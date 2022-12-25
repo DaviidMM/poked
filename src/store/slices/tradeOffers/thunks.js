@@ -1,10 +1,28 @@
-import { getTradeOffers } from '../../../services/firebase/db/index.js';
-import { setLoadingOffers, setOffers } from './';
+import {
+  createTradeOffer,
+  listenToTradeOffers,
+} from '../../../services/firebase/db/index.js';
+import {
+  setCreatingOffer,
+  setLoadedOffers,
+  setLoadingOffers,
+  setOffers,
+} from './';
+
+export const addTradeOffer = (tradeOffer) => {
+  return async (dispatch) => {
+    dispatch(setCreatingOffer());
+    const newTradeOffer = await createTradeOffer(tradeOffer);
+    dispatch(setLoadedOffers());
+    return newTradeOffer;
+  };
+};
 
 export const loadTradeOffers = () => {
   return async (dispatch) => {
     dispatch(setLoadingOffers());
-    const tradeOffers = await getTradeOffers();
-    dispatch(setOffers(tradeOffers));
+    return listenToTradeOffers((tradeOffers) => {
+      dispatch(setOffers(tradeOffers));
+    });
   };
 };

@@ -24,9 +24,12 @@ const firebaseConfig = {
   measurementId: VITE_FIREBASE_MEASUREMENT_ID,
 };
 
+// Initialize Firebase app and services
 export const app = initializeApp(firebaseConfig);
 export const analytics = getAnalytics(app);
 export const auth = getAuth(app);
+
+export const logout = () => signOut(auth);
 
 export const mapUserFromFirebase = (user) => {
   if (!user) {
@@ -40,5 +43,3 @@ export const mapUserFromFirebase = (user) => {
     uid,
   };
 };
-
-export const logout = () => signOut(auth);

@@ -34,7 +34,11 @@ export default function PokemonMeta({ pokemon }) {
         <div
           className={
             'flex flex-col gap-2 transition-all duration-200 absolute right-0 ' +
-            (shiny && item ? 'top-0 group-hover:translate-y-24' : 'top-24')
+            (shiny && item
+              ? 'top-0 group-hover:translate-y-24'
+              : shiny
+              ? 'top-24'
+              : 'top-12')
           }
         >
           <div

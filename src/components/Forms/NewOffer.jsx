@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import usePokemon from '../../hooks/usePokemon';
-import usePokemons from '../../hooks/usePokemons';
+import usePokemonList from '../../hooks/usePokemonList';
 import Select from '../Select';
 import pokemonListStatuses from '../../store/slices/pokemon/status';
 import itemListStatuses from '../../store/slices/items/status';
@@ -9,12 +9,16 @@ import Button from '../Button';
 import Input from '../Input';
 import Checkbox from '../Checkbox';
 import { toast } from 'react-toastify';
-import { createTradeOffer } from '../../services/firebase/db/index';
 import useItems from '../../hooks/useItems';
 import { useMemo } from 'react';
+import { addTradeOffer } from '../../store/slices/tradeOffers/thunks';
+import { useDispatch } from 'react-redux';
+import useAuth from '../../hooks/useAuth';
 
-export default function NewOfferForm() {
-  const { list: pokemonList, status: pokemonListStatus } = usePokemons();
+export default function NewOfferForm({ closeModal }) {
+  const { user } = useAuth();
+  const dispatch = useDispatch();
+  const { list: pokemonList, status: pokemonListStatus } = usePokemonList();
   const { list: itemList, status: itemListStatus } = useItems();
   const pokeballs = useMemo(
     () => itemList.filter((i) => i.category === 'pokeBalls'),
@@ -76,24 +80,28 @@ export default function NewOfferForm() {
   const handlePostOffer = (e) => {
     e.preventDefault();
     console.log('submit');
-    createTradeOffer({
-      giving: {
-        pokemon: pokemon.number,
-        shiny,
-        ball,
-        level,
-        nature,
-        item,
-        ivs,
-        evs,
-      },
-    })
+    dispatch(
+      addTradeOffer({
+        giving: {
+          pokemon: pokemon.number,
+          shiny,
+          ball,
+          level,
+          nature,
+          item,
+          ivs,
+          evs,
+        },
+        postedBy: user.uid,
+      })
+    )
       .then((createdOffer) => {
         console.log({ createdOffer });
         toast.success('Oferta creada con éxito');
+        closeModal();
       })
       .catch((err) => {
-        toast.error('Error al publicar el pokemon');
+        toast.error('Error al publicar la oferta');
         console.error(err);
       });
   };
@@ -355,7 +363,14 @@ export default function NewOfferForm() {
           Selecciona un pokemon para continuar
         </h2>
       )}
-      <Button color="red" disabled={!pokemon}>
+      <Button
+        color="red"
+        disabled={
+          !pokemon ||
+          pokemonListStatus !== pokemonListStatuses.loaded ||
+          itemListStatus !== itemListStatuses.loaded
+        }
+      >
         Publicar
       </Button>
     </form>

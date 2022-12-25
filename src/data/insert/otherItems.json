@@ -1,0 +1,910 @@
+[
+  {
+    "name": "Ability Capsule",
+    "image": "https://www.gamerguides.com/assets/media/15/2127/item_0645.png"
+  },
+  {
+    "name": "Ability Patch",
+    "image": "https://www.gamerguides.com/assets/media/15/2176/item_1606.png"
+  },
+  {
+    "name": "Ability Shield",
+    "image": "https://www.gamerguides.com/assets/media/15/1417/item_1881.png"
+  },
+  {
+    "name": "Absorb Bulb",
+    "image": "https://www.gamerguides.com/assets/media/15/1914/item_0545.png"
+  },
+  {
+    "name": "Adamant Mint",
+    "image": "https://www.gamerguides.com/assets/media/15/2154/item_1232.png"
+  },
+  {
+    "name": "Adamant Orb",
+    "image": "https://www.gamerguides.com/assets/media/15/2040/item_0135.png"
+  },
+  {
+    "name": "Adrenaline Orb",
+    "image": "https://www.gamerguides.com/assets/media/15/2139/item_0846.png"
+  },
+  {
+    "name": "Air Balloon",
+    "image": "https://www.gamerguides.com/assets/media/15/2112/item_0541.png"
+  },
+  {
+    "name": "Amulet Coin",
+    "image": "https://www.gamerguides.com/assets/media/15/1990/item_0223.png"
+  },
+  {
+    "name": "Assault Vest",
+    "image": "https://www.gamerguides.com/assets/media/15/2125/item_0640.png"
+  },
+  {
+    "name": "Auspicious Armor",
+    "image": "https://www.gamerguides.com/assets/media/15/1665/item_2344.png"
+  },
+  {
+    "name": "Big Root",
+    "image": "https://www.gamerguides.com/assets/media/15/1382/item_0296.png"
+  },
+  {
+    "name": "Binding Band",
+    "image": "https://www.gamerguides.com/assets/media/15/2115/item_0544.png"
+  },
+  {
+    "name": "Black Augurite",
+    "image": "https://www.gamerguides.com/assets/media/15/2177/item_1691.png"
+  },
+  {
+    "name": "Black Belt",
+    "image": "https://www.gamerguides.com/assets/media/15/2001/item_0241.png"
+  },
+  {
+    "name": "Black Glasses",
+    "image": "https://www.gamerguides.com/assets/media/15/2000/item_0240.png"
+  },
+  {
+    "name": "Black Sludge",
+    "image": "https://www.gamerguides.com/assets/media/15/2062/item_0281.png"
+  },
+  {
+    "name": "Blunder Policy",
+    "image": "https://www.gamerguides.com/assets/media/15/2149/item_1121.png"
+  },
+  {
+    "name": "Bold Mint",
+    "image": "https://www.gamerguides.com/assets/media/15/2156/item_1235.png"
+  },
+  {
+    "name": "Booster Energy",
+    "image": "https://www.gamerguides.com/assets/media/15/1678/item_1880.png"
+  },
+  {
+    "name": "Brave Mint",
+    "image": "https://www.gamerguides.com/assets/media/15/1907/item_1231.png"
+  },
+  {
+    "name": "Bright Powder",
+    "image": "https://www.gamerguides.com/assets/media/15/1980/item_0213.png"
+  },
+  {
+    "name": "Bug Tera Shard",
+    "image": "https://www.gamerguides.com/assets/media/15/1491/item_1873.png"
+  },
+  {
+    "name": "Calcium",
+    "image": "https://www.gamerguides.com/assets/media/15/1472/item_0049.png"
+  },
+  {
+    "name": "Calm Mint",
+    "image": "https://www.gamerguides.com/assets/media/15/1909/item_1243.png"
+  },
+  {
+    "name": "Carbos",
+    "image": "https://www.gamerguides.com/assets/media/15/1906/item_0048.png"
+  },
+  {
+    "name": "Careful Mint",
+    "image": "https://www.gamerguides.com/assets/media/15/2163/item_1245.png"
+  },
+  {
+    "name": "Cell Battery",
+    "image": "https://www.gamerguides.com/assets/media/15/2117/item_0546.png"
+  },
+  {
+    "name": "Charcoal",
+    "image": "https://www.gamerguides.com/assets/media/15/2008/item_0249.png"
+  },
+  {
+    "name": "Chipped Pot",
+    "image": "https://www.gamerguides.com/assets/media/15/2342/item_1254.png"
+  },
+  {
+    "name": "Choice Band",
+    "image": "https://www.gamerguides.com/assets/media/15/1987/item_0220.png"
+  },
+  {
+    "name": "Choice Scarf",
+    "image": "https://www.gamerguides.com/assets/media/15/2065/item_0287.png"
+  },
+  {
+    "name": "Choice Specs",
+    "image": "https://www.gamerguides.com/assets/media/15/2075/item_0297.png"
+  },
+  {
+    "name": "Cleanse Tag",
+    "image": "https://www.gamerguides.com/assets/media/15/1983/item_0224.png"
+  },
+  {
+    "name": "Clear Amulet",
+    "image": "https://www.gamerguides.com/assets/media/15/1679/item_1882.png"
+  },
+  {
+    "name": "Clever Feather",
+    "image": "https://www.gamerguides.com/assets/media/15/1476/item_0569.png"
+  },
+  {
+    "name": "Covert Cloak",
+    "image": "https://www.gamerguides.com/assets/media/15/1487/item_1885.png"
+  },
+  {
+    "name": "Cracked Pot",
+    "image": "https://www.gamerguides.com/assets/media/15/2152/item_1253.png"
+  },
+  {
+    "name": "Damp Rock",
+    "image": "https://www.gamerguides.com/assets/media/15/2063/item_0285.png"
+  },
+  {
+    "name": "Dark Tera Shard",
+    "image": "https://www.gamerguides.com/assets/media/15/1676/item_1877.png"
+  },
+  {
+    "name": "Dawn Stone",
+    "image": "https://www.gamerguides.com/assets/media/15/1912/item_0109.png"
+  },
+  {
+    "name": "Destiny Knot",
+    "image": "https://www.gamerguides.com/assets/media/15/2061/item_0280.png"
+  },
+  {
+    "name": "Draco Plate",
+    "image": "https://www.gamerguides.com/assets/media/15/2089/item_0311.png"
+  },
+  {
+    "name": "Dragon Fang",
+    "image": "https://www.gamerguides.com/assets/media/15/2009/item_0250.png"
+  },
+  {
+    "name": "Dragon Tera Shard",
+    "image": "https://www.gamerguides.com/assets/media/15/1675/item_1876.png"
+  },
+  {
+    "name": "Dread Plate",
+    "image": "https://www.gamerguides.com/assets/media/15/2090/item_0312.png"
+  },
+  {
+    "name": "Dusk Stone",
+    "image": "https://www.gamerguides.com/assets/media/15/2014/item_0108.png"
+  },
+  {
+    "name": "Earth Plate",
+    "image": "https://www.gamerguides.com/assets/media/15/2083/item_0305.png"
+  },
+  {
+    "name": "Eject Button",
+    "image": "https://www.gamerguides.com/assets/media/15/2118/item_0547.png"
+  },
+  {
+    "name": "Eject Pack",
+    "image": "https://www.gamerguides.com/assets/media/15/2147/item_1119.png"
+  },
+  {
+    "name": "Electric Seed",
+    "image": "https://www.gamerguides.com/assets/media/15/2143/item_0881.png"
+  },
+  {
+    "name": "Electric Tera Shard",
+    "image": "https://www.gamerguides.com/assets/media/15/1668/item_1865.png"
+  },
+  {
+    "name": "Escape Rope",
+    "image": "https://www.gamerguides.com/assets/media/15/2037/item_0078.png"
+  },
+  {
+    "name": "Everstone",
+    "image": "https://www.gamerguides.com/assets/media/15/1992/item_0229.png"
+  },
+  {
+    "name": "Eviolite",
+    "image": "https://www.gamerguides.com/assets/media/15/2109/item_0538.png"
+  },
+  {
+    "name": "Exp. Candy L",
+    "image": "https://www.gamerguides.com/assets/media/15/1469/item_1127.png"
+  },
+  {
+    "name": "Exp. Candy M",
+    "image": "https://www.gamerguides.com/assets/media/15/1468/item_1126.png"
+  },
+  {
+    "name": "Exp. Candy S",
+    "image": "https://www.gamerguides.com/assets/media/15/1368/item_1125.png"
+  },
+  {
+    "name": "Exp. Candy XL",
+    "image": "https://www.gamerguides.com/assets/media/15/1470/item_1128.png"
+  },
+  {
+    "name": "Exp. Candy XS",
+    "image": "https://www.gamerguides.com/assets/media/15/1367/item_1124.png"
+  },
+  {
+    "name": "Exp. Share",
+    "image": "https://www.gamerguides.com/assets/media/15/1982/item_0216.png"
+  },
+  {
+    "name": "Expert Belt",
+    "image": "https://www.gamerguides.com/assets/media/15/2024/item_0268.png"
+  },
+  {
+    "name": "Fairy Tera Shard",
+    "image": "https://www.gamerguides.com/assets/media/15/1677/item_1879.png"
+  },
+  {
+    "name": "Fighting Tera Shard",
+    "image": "https://www.gamerguides.com/assets/media/15/1670/item_1863.png"
+  },
+  {
+    "name": "Fire Stone",
+    "image": "https://www.gamerguides.com/assets/media/15/1376/item_0082.png"
+  },
+  {
+    "name": "Fire Tera Shard",
+    "image": "https://www.gamerguides.com/assets/media/15/1666/item_1863.png"
+  },
+  {
+    "name": "Fist Plate",
+    "image": "https://www.gamerguides.com/assets/media/15/2081/item_0303.png"
+  },
+  {
+    "name": "Flame Orb",
+    "image": "https://www.gamerguides.com/assets/media/15/2028/item_0273.png"
+  },
+  {
+    "name": "Flame Plate",
+    "image": "https://www.gamerguides.com/assets/media/15/2076/item_0298.png"
+  },
+  {
+    "name": "Float Stone",
+    "image": "https://www.gamerguides.com/assets/media/15/2110/item_0539.png"
+  },
+  {
+    "name": "Flying Tera Shard",
+    "image": "https://www.gamerguides.com/assets/media/15/1489/item_1864.png"
+  },
+  {
+    "name": "Focus Band",
+    "image": "https://www.gamerguides.com/assets/media/15/1993/item_0230.png"
+  },
+  {
+    "name": "Focus Sash",
+    "image": "https://www.gamerguides.com/assets/media/15/2056/item_0275.png"
+  },
+  {
+    "name": "Full Incense",
+    "image": "https://www.gamerguides.com/assets/media/15/2094/item_0316.png"
+  },
+  {
+    "name": "Galarica Cuff",
+    "image": "https://www.gamerguides.com/assets/media/15/2171/item_1582.png"
+  },
+  {
+    "name": "Galarica Wreath",
+    "image": "https://www.gamerguides.com/assets/media/15/2175/item_1592.png"
+  },
+  {
+    "name": "Genius Feather",
+    "image": "https://www.gamerguides.com/assets/media/15/1475/item_0568.png"
+  },
+  {
+    "name": "Gentle Mint",
+    "image": "https://www.gamerguides.com/assets/media/15/1910/item_1243.png"
+  },
+  {
+    "name": "Ghost Tera Shard",
+    "image": "https://www.gamerguides.com/assets/media/15/1674/item_1875.png"
+  },
+  {
+    "name": "Grass Tera Shard",
+    "image": "https://www.gamerguides.com/assets/media/15/2183/item_1866.png"
+  },
+  {
+    "name": "Grassy Seed",
+    "image": "https://www.gamerguides.com/assets/media/15/1917/item_0884.png"
+  },
+  {
+    "name": "Grip Claw",
+    "image": "https://www.gamerguides.com/assets/media/15/2064/item_0286.png"
+  },
+  {
+    "name": "Griseous Orb",
+    "image": "https://www.gamerguides.com/assets/media/15/2016/item_0112.png"
+  },
+  {
+    "name": "Ground Tera Shard",
+    "image": "https://www.gamerguides.com/assets/media/15/1672/item_1870.png"
+  },
+  {
+    "name": "Hard Stone",
+    "image": "https://www.gamerguides.com/assets/media/15/1381/item_0238.png"
+  },
+  {
+    "name": "Hasty Mint",
+    "image": "https://www.gamerguides.com/assets/media/15/1478/item_1247.png"
+  },
+  {
+    "name": "Health Feather",
+    "image": "https://www.gamerguides.com/assets/media/15/1473/item_0565.png"
+  },
+  {
+    "name": "Heat Rock",
+    "image": "https://www.gamerguides.com/assets/media/15/1485/item_0284.png"
+  },
+  {
+    "name": "Heavy-Duty Boots",
+    "image": "https://www.gamerguides.com/assets/media/15/2148/item_1120.png"
+  },
+  {
+    "name": "HP Up",
+    "image": "https://www.gamerguides.com/assets/media/15/1369/item_0045.png"
+  },
+  {
+    "name": "Ice Stone",
+    "image": "https://www.gamerguides.com/assets/media/15/1480/item_0849.png"
+  },
+  {
+    "name": "Ice Tera Shard",
+    "image": "https://www.gamerguides.com/assets/media/15/1669/item_1867.png"
+  },
+  {
+    "name": "Icicle Plate",
+    "image": "https://www.gamerguides.com/assets/media/15/2080/item_0302.png"
+  },
+  {
+    "name": "Icy Rock",
+    "image": "https://www.gamerguides.com/assets/media/15/1483/item_0282.png"
+  },
+  {
+    "name": "Impish Mint",
+    "image": "https://www.gamerguides.com/assets/media/15/1908/item_1235.png"
+  },
+  {
+    "name": "Insect Plate",
+    "image": "https://www.gamerguides.com/assets/media/15/2086/item_0308.png"
+  },
+  {
+    "name": "Iron",
+    "image": "https://www.gamerguides.com/assets/media/15/1371/item_0047.png"
+  },
+  {
+    "name": "Iron Ball",
+    "image": "https://www.gamerguides.com/assets/media/15/2059/item_0278.png"
+  },
+  {
+    "name": "Iron Plate",
+    "image": "https://www.gamerguides.com/assets/media/15/2091/item_0313.png"
+  },
+  {
+    "name": "Jolly Mint",
+    "image": "https://www.gamerguides.com/assets/media/15/2166/item_1249.png"
+  },
+  {
+    "name": "King’s Rock",
+    "image": "https://www.gamerguides.com/assets/media/15/1988/item_0221.png"
+  },
+  {
+    "name": "Lagging Tail",
+    "image": "https://www.gamerguides.com/assets/media/15/2060/item_0279.png"
+  },
+  {
+    "name": "Lax Incense",
+    "image": "https://www.gamerguides.com/assets/media/15/2034/item_0255.png"
+  },
+  {
+    "name": "Lax Mint",
+    "image": "https://www.gamerguides.com/assets/media/15/2157/item_1237.png"
+  },
+  {
+    "name": "Leader’s Crest",
+    "image": "https://www.gamerguides.com/assets/media/15/2202/item_2345.png"
+  },
+  {
+    "name": "Leaf Stone",
+    "image": "https://www.gamerguides.com/assets/media/15/1911/item_0085.png"
+  },
+  {
+    "name": "Leftovers",
+    "image": "https://www.gamerguides.com/assets/media/15/1997/item_0234.png"
+  },
+  {
+    "name": "Life Orb",
+    "image": "https://www.gamerguides.com/assets/media/15/2020/item_0270.png"
+  },
+  {
+    "name": "Light Ball",
+    "image": "https://www.gamerguides.com/assets/media/15/1998/item_0236.png"
+  },
+  {
+    "name": "Light Clay",
+    "image": "https://www.gamerguides.com/assets/media/15/2025/item_0269.png"
+  },
+  {
+    "name": "Loaded Dice",
+    "image": "https://www.gamerguides.com/assets/media/15/1682/item_1886.png"
+  },
+  {
+    "name": "Lonely Mint",
+    "image": "https://www.gamerguides.com/assets/media/15/2153/item_1231.png"
+  },
+  {
+    "name": "Luck Incense",
+    "image": "https://www.gamerguides.com/assets/media/15/2097/item_0319.png"
+  },
+  {
+    "name": "Lucky Egg",
+    "image": "https://www.gamerguides.com/assets/media/15/1994/item_0231.png"
+  },
+  {
+    "name": "Luminous Moss",
+    "image": "https://www.gamerguides.com/assets/media/15/2128/item_0648.png"
+  },
+  {
+    "name": "Lustrous Orb",
+    "image": "https://www.gamerguides.com/assets/media/15/2041/item_0136.png"
+  },
+  {
+    "name": "Magnet",
+    "image": "https://www.gamerguides.com/assets/media/15/2002/item_0242.png"
+  },
+  {
+    "name": "Malicious Armor",
+    "image": "https://www.gamerguides.com/assets/media/15/1664/item_1861.png"
+  },
+  {
+    "name": "Max Repel",
+    "image": "https://www.gamerguides.com/assets/media/15/2036/item_0077.png"
+  },
+  {
+    "name": "Meadow Plate",
+    "image": "https://www.gamerguides.com/assets/media/15/2079/item_0301.png"
+  },
+  {
+    "name": "Mental Herb",
+    "image": "https://www.gamerguides.com/assets/media/15/1986/item_0219.png"
+  },
+  {
+    "name": "Metal Coat",
+    "image": "https://www.gamerguides.com/assets/media/15/1996/item_0233.png"
+  },
+  {
+    "name": "Metronome",
+    "image": "https://www.gamerguides.com/assets/media/15/2058/item_0277.png"
+  },
+  {
+    "name": "Mild Mint",
+    "image": "https://www.gamerguides.com/assets/media/15/2160/item_1240.png"
+  },
+  {
+    "name": "Mind Plate",
+    "image": "https://www.gamerguides.com/assets/media/15/2085/item_0307.png"
+  },
+  {
+    "name": "Miracle Seed",
+    "image": "https://www.gamerguides.com/assets/media/15/1999/item_0239.png"
+  },
+  {
+    "name": "Mirror Herb",
+    "image": "https://www.gamerguides.com/assets/media/15/1680/item_1883.png"
+  },
+  {
+    "name": "Misty Seed",
+    "image": "https://www.gamerguides.com/assets/media/15/1916/item_0883.png"
+  },
+  {
+    "name": "Modest Mint",
+    "image": "https://www.gamerguides.com/assets/media/15/2159/item_1239.png"
+  },
+  {
+    "name": "Moon Stone",
+    "image": "https://www.gamerguides.com/assets/media/15/1375/item_0081.png"
+  },
+  {
+    "name": "Muscle Band",
+    "image": "https://www.gamerguides.com/assets/media/15/1482/item_0266.png"
+  },
+  {
+    "name": "Muscle Band",
+    "image": "https://www.gamerguides.com/assets/media/15/2022/item_0266.png"
+  },
+  {
+    "name": "Muscle Feather",
+    "image": "https://www.gamerguides.com/assets/media/15/1373/item_0566.png"
+  },
+  {
+    "name": "Mystic Water",
+    "image": "https://www.gamerguides.com/assets/media/15/2003/item_0243.png"
+  },
+  {
+    "name": "Naive Mint",
+    "image": "https://www.gamerguides.com/assets/media/15/2167/item_1250.png"
+  },
+  {
+    "name": "Naughty Mint",
+    "image": "https://www.gamerguides.com/assets/media/15/2155/item_1233.png"
+  },
+  {
+    "name": "Never-Melt Ice",
+    "image": "https://www.gamerguides.com/assets/media/15/1481/item_0246.png"
+  },
+  {
+    "name": "Normal Gem",
+    "image": "https://www.gamerguides.com/assets/media/15/2119/item_0564.png"
+  },
+  {
+    "name": "Normal Tera Shard",
+    "image": "https://www.gamerguides.com/assets/media/15/1488/item_1862.png"
+  },
+  {
+    "name": "Odd Incense",
+    "image": "https://www.gamerguides.com/assets/media/15/2092/item_0314.png"
+  },
+  {
+    "name": "Oval Stone",
+    "image": "https://www.gamerguides.com/assets/media/15/1479/item_0110.png"
+  },
+  {
+    "name": "Peat Block",
+    "image": "https://www.gamerguides.com/assets/media/15/2178/item_1692.png"
+  },
+  {
+    "name": "Pink Nectar",
+    "image": "https://www.gamerguides.com/assets/media/15/2195/item_0855.png"
+  },
+  {
+    "name": "Pixie Plate",
+    "image": "https://www.gamerguides.com/assets/media/15/2126/item_0644.png"
+  },
+  {
+    "name": "Poison Barb",
+    "image": "https://www.gamerguides.com/assets/media/15/2005/item_0245.png"
+  },
+  {
+    "name": "Poison Tera Shard",
+    "image": "https://www.gamerguides.com/assets/media/15/1671/item_1869.png"
+  },
+  {
+    "name": "Power Anklet",
+    "image": "https://www.gamerguides.com/assets/media/15/2071/item_0293.png"
+  },
+  {
+    "name": "Power Band",
+    "image": "https://www.gamerguides.com/assets/media/15/2070/item_0292.png"
+  },
+  {
+    "name": "Power Belt",
+    "image": "https://www.gamerguides.com/assets/media/15/2068/item_0290.png"
+  },
+  {
+    "name": "Power Bracer",
+    "image": "https://www.gamerguides.com/assets/media/15/2067/item_0289.png"
+  },
+  {
+    "name": "Power Herb",
+    "image": "https://www.gamerguides.com/assets/media/15/2026/item_0271.png"
+  },
+  {
+    "name": "Power Lens",
+    "image": "https://www.gamerguides.com/assets/media/15/2069/item_0291.png"
+  },
+  {
+    "name": "Power Weight",
+    "image": "https://www.gamerguides.com/assets/media/15/2072/item_0294.png"
+  },
+  {
+    "name": "PP Max",
+    "image": "https://www.gamerguides.com/assets/media/15/2032/item_0053.png"
+  },
+  {
+    "name": "PP Up",
+    "image": "https://www.gamerguides.com/assets/media/15/1471/item_0051.png"
+  },
+  {
+    "name": "Protective Pads",
+    "image": "https://www.gamerguides.com/assets/media/15/2142/item_0880.png"
+  },
+  {
+    "name": "Protein",
+    "image": "https://www.gamerguides.com/assets/media/15/1370/item_0046.png"
+  },
+  {
+    "name": "Psychic Seed",
+    "image": "https://www.gamerguides.com/assets/media/15/1915/item_0882.png"
+  },
+  {
+    "name": "Psychic Tera Shard",
+    "image": "https://www.gamerguides.com/assets/media/15/1490/item_1872.png"
+  },
+  {
+    "name": "Punching Glove",
+    "image": "https://www.gamerguides.com/assets/media/15/1681/item_1884.png"
+  },
+  {
+    "name": "Pure Incense",
+    "image": "https://www.gamerguides.com/assets/media/15/2098/item_0320.png"
+  },
+  {
+    "name": "Purple Nectar",
+    "image": "https://www.gamerguides.com/assets/media/15/2196/item_0856.png"
+  },
+  {
+    "name": "Quick Claw",
+    "image": "https://www.gamerguides.com/assets/media/15/1984/item_0217.png"
+  },
+  {
+    "name": "Quiet Mint",
+    "image": "https://www.gamerguides.com/assets/media/15/2162/item_1242.png"
+  },
+  {
+    "name": "Rare Candy",
+    "image": "https://www.gamerguides.com/assets/media/15/1366/item_0050.png"
+  },
+  {
+    "name": "Rash Mint",
+    "image": "https://www.gamerguides.com/assets/media/15/2161/item_1241.png"
+  },
+  {
+    "name": "Razor Claw",
+    "image": "https://www.gamerguides.com/assets/media/15/2099/item_0326.png"
+  },
+  {
+    "name": "Red Card",
+    "image": "https://www.gamerguides.com/assets/media/15/2113/item_0542.png"
+  },
+  {
+    "name": "Red Nectar",
+    "image": "https://www.gamerguides.com/assets/media/15/2193/item_0853.png"
+  },
+  {
+    "name": "Relaxed Mint",
+    "image": "https://www.gamerguides.com/assets/media/15/2158/item_1238.png"
+  },
+  {
+    "name": "Repel",
+    "image": "https://www.gamerguides.com/assets/media/15/2038/item_0079.png"
+  },
+  {
+    "name": "Resist Feather",
+    "image": "https://www.gamerguides.com/assets/media/15/1474/item_0567.png"
+  },
+  {
+    "name": "Ring Target",
+    "image": "https://www.gamerguides.com/assets/media/15/2114/item_0543.png"
+  },
+  {
+    "name": "Rock Incense",
+    "image": "https://www.gamerguides.com/assets/media/15/2093/item_0315.png"
+  },
+  {
+    "name": "Rock Tera Shard",
+    "image": "https://www.gamerguides.com/assets/media/15/1673/item_1870.png"
+  },
+  {
+    "name": "Rocky Helmet",
+    "image": "https://www.gamerguides.com/assets/media/15/2111/item_0540.png"
+  },
+  {
+    "name": "Room Service",
+    "image": "https://www.gamerguides.com/assets/media/15/2150/item_1122.png"
+  },
+  {
+    "name": "Rose Incense",
+    "image": "https://www.gamerguides.com/assets/media/15/2096/item_0318.png"
+  },
+  {
+    "name": "Safety Goggles",
+    "image": "https://www.gamerguides.com/assets/media/15/2130/item_0650.png"
+  },
+  {
+    "name": "Sassy Mint",
+    "image": "https://www.gamerguides.com/assets/media/15/2164/item_1246.png"
+  },
+  {
+    "name": "Scope Lens",
+    "image": "https://www.gamerguides.com/assets/media/15/1995/item_0232.png"
+  },
+  {
+    "name": "Scroll of Darkness",
+    "image": "https://www.gamerguides.com/assets/media/15/1662/item_1857.png"
+  },
+  {
+    "name": "Scroll of Waters",
+    "image": "https://www.gamerguides.com/assets/media/15/1663/item_1858.png"
+  },
+  {
+    "name": "Sea Incense",
+    "image": "https://www.gamerguides.com/assets/media/15/2029/item_0254.png"
+  },
+  {
+    "name": "Serious Mint",
+    "image": "https://www.gamerguides.com/assets/media/15/2168/item_1251.png"
+  },
+  {
+    "name": "Sharp Beak",
+    "image": "https://www.gamerguides.com/assets/media/15/2004/item_0244.png"
+  },
+  {
+    "name": "Shed Shell",
+    "image": "https://www.gamerguides.com/assets/media/15/2073/item_0295.png"
+  },
+  {
+    "name": "Shell Bell",
+    "image": "https://www.gamerguides.com/assets/media/15/2033/item_0253.png"
+  },
+  {
+    "name": "Shiny Stone",
+    "image": "https://www.gamerguides.com/assets/media/15/2013/item_0107.png"
+  },
+  {
+    "name": "Silk Scarf",
+    "image": "https://www.gamerguides.com/assets/media/15/2010/item_0251.png"
+  },
+  {
+    "name": "Silver Powder",
+    "image": "https://www.gamerguides.com/assets/media/15/1989/item_0222.png"
+  },
+  {
+    "name": "Sky Plate",
+    "image": "https://www.gamerguides.com/assets/media/15/2084/item_0306.png"
+  },
+  {
+    "name": "Smoke Ball",
+    "image": "https://www.gamerguides.com/assets/media/15/1991/item_0228.png"
+  },
+  {
+    "name": "Smooth Rock",
+    "image": "https://www.gamerguides.com/assets/media/15/1484/item_0283.png"
+  },
+  {
+    "name": "Snowball",
+    "image": "https://www.gamerguides.com/assets/media/15/2129/item_0649.png"
+  },
+  {
+    "name": "Soft Sand",
+    "image": "https://www.gamerguides.com/assets/media/15/1380/item_0237.png"
+  },
+  {
+    "name": "Soothe Bell",
+    "image": "https://www.gamerguides.com/assets/media/15/1985/item_0218.png"
+  },
+  {
+    "name": "Spell Tag",
+    "image": "https://www.gamerguides.com/assets/media/15/2006/item_0247.png"
+  },
+  {
+    "name": "Splash Plate",
+    "image": "https://www.gamerguides.com/assets/media/15/2077/item_0299.png"
+  },
+  {
+    "name": "Spooky Plate",
+    "image": "https://www.gamerguides.com/assets/media/15/2088/item_0310.png"
+  },
+  {
+    "name": "Steel Tera Shard",
+    "image": "https://www.gamerguides.com/assets/media/15/1492/item_1878.png"
+  },
+  {
+    "name": "Sticky Barb",
+    "image": "https://www.gamerguides.com/assets/media/15/2066/item_0288.png"
+  },
+  {
+    "name": "Stone Plate",
+    "image": "https://www.gamerguides.com/assets/media/15/2087/item_0309.png"
+  },
+  {
+    "name": "Sun Stone",
+    "image": "https://www.gamerguides.com/assets/media/15/1374/item_0080.png"
+  },
+  {
+    "name": "Super Repel",
+    "image": "https://www.gamerguides.com/assets/media/15/2035/item_0076.png"
+  },
+  {
+    "name": "Sweet Apple",
+    "image": "https://www.gamerguides.com/assets/media/15/2145/item_1116.png"
+  },
+  {
+    "name": "Swift Feather",
+    "image": "https://www.gamerguides.com/assets/media/15/1477/item_0570.png"
+  },
+  {
+    "name": "Tart Apple",
+    "image": "https://www.gamerguides.com/assets/media/15/1913/item_1117.png"
+  },
+  {
+    "name": "Terrain Extender",
+    "image": "https://www.gamerguides.com/assets/media/15/2141/item_0879.png"
+  },
+  {
+    "name": "Throat Spray",
+    "image": "https://www.gamerguides.com/assets/media/15/2146/item_1118.png"
+  },
+  {
+    "name": "Thunder Stone",
+    "image": "https://www.gamerguides.com/assets/media/15/1377/item_0083.png"
+  },
+  {
+    "name": "Timid Mint",
+    "image": "https://www.gamerguides.com/assets/media/15/2165/item_1247.png"
+  },
+  {
+    "name": "Toxic Orb",
+    "image": "https://www.gamerguides.com/assets/media/15/2027/item_0272.png"
+  },
+  {
+    "name": "Toxic Plate",
+    "image": "https://www.gamerguides.com/assets/media/15/2082/item_0304.png"
+  },
+  {
+    "name": "Twisted Spoon",
+    "image": "https://www.gamerguides.com/assets/media/15/2007/item_0248.png"
+  },
+  {
+    "name": "Utility Umbrella",
+    "image": "https://www.gamerguides.com/assets/media/15/2151/item_1123.png"
+  },
+  {
+    "name": "Water Stone",
+    "image": "https://www.gamerguides.com/assets/media/15/1378/item_0084.png"
+  },
+  {
+    "name": "Water Tera Shard",
+    "image": "https://www.gamerguides.com/assets/media/15/1667/item_1864.png"
+  },
+  {
+    "name": "Wave Incense",
+    "image": "https://www.gamerguides.com/assets/media/15/2095/item_0317.png"
+  },
+  {
+    "name": "Weakness Policy",
+    "image": "https://www.gamerguides.com/assets/media/15/2124/item_0639.png"
+  },
+  {
+    "name": "White Herb",
+    "image": "https://www.gamerguides.com/assets/media/15/1981/item_0214.png"
+  },
+  {
+    "name": "Wide Lens",
+    "image": "https://www.gamerguides.com/assets/media/15/2021/item_0265.png"
+  },
+  {
+    "name": "Wise Glasses",
+    "image": "https://www.gamerguides.com/assets/media/15/2023/item_0267.png"
+  },
+  {
+    "name": "Yellow Nectar",
+    "image": "https://www.gamerguides.com/assets/media/15/2194/item_0854.png"
+  },
+  {
+    "name": "Zap Plate",
+    "image": "https://www.gamerguides.com/assets/media/15/2078/item_0300.png"
+  },
+  {
+    "name": "Zinc",
+    "image": "https://www.gamerguides.com/assets/media/15/1372/item_0052.png"
+  },
+  {
+    "name": "Zoom Lens",
+    "image": "https://www.gamerguides.com/assets/media/15/2057/item_0276.png"
+  }
+]

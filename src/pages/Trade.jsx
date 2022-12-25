@@ -2,15 +2,16 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import useTradeOffers from '../hooks/useTradeOffers';
 import tradeOffersStatuses from '../store/slices/tradeOffers/status';
+import pokemonListStatuses from '../store/slices/pokemon/status';
 import TradeCard from '../components/TradeCard';
 import TradeSearchBar from '../components/TradeSearchBar';
 import Button from '../components/Button';
 import NewOfferModal from '../components/NewOfferModal';
-import usePokemons from '../hooks/usePokemons';
+import usePokemonList from '../hooks/usePokemonList';
 import LoadingPokeball from '../components/Loading/Pokeball';
 
 export default function TradePage() {
-  const { list } = usePokemons();
+  const { list, status: pokemonListStatus } = usePokemonList();
   const { offers, status: tradeOffersStatus } = useTradeOffers();
   const [search, setSearch] = useState({
     giving: '',
@@ -21,16 +22,21 @@ export default function TradePage() {
   const [openNewOfferModal, setOpenNewOfferModal] = useState(false);
 
   useEffect(() => {
-    const filtered = offers.filter(
-      (offer) =>
-        list
-          .find((pokemon) => pokemon.number === offer.giving.pokemon)
-          .name.toLowerCase()
-          .includes(search.giving.toLowerCase()) &&
-        (!search.shiny || offer.giving.shiny === search.shiny)
-    );
-    setFilteredOffers(filtered);
-  }, [offers, search]);
+    if (
+      pokemonListStatus === pokemonListStatuses.loaded &&
+      tradeOffersStatus === pokemonListStatuses.loaded
+    ) {
+      const filtered = offers.filter(
+        (offer) =>
+          list
+            .find((pokemon) => pokemon.number === offer.giving.pokemon)
+            .name.toLowerCase()
+            .includes(search.giving.toLowerCase()) &&
+          (!search.shiny || offer.giving.shiny === search.shiny)
+      );
+      setFilteredOffers(filtered);
+    }
+  }, [offers, search, pokemonListStatus, tradeOffersStatus]);
 
   const handleSearch = (e) => {
     const { name, value } = e.target;
