@@ -1,6 +1,7 @@
 import { Dialog, Transition } from '@headlessui/react';
 import { Fragment } from 'react';
 import NewOfferForm from './Forms/NewOffer';
+import { HiXMark } from 'react-icons/hi2';
 
 export default function NewOfferModal({ open, closeModal }) {
   return (
@@ -19,11 +20,7 @@ export default function NewOfferModal({ open, closeModal }) {
         </Transition.Child>
 
         <div className="fixed inset-0 max-h-screen">
-          <div
-            className={
-              'justify-center text-center h-screen max-h-screen overflow-auto p-16'
-            }
-          >
+          <div className="justify-center text-center h-screen max-h-screen overflow-auto p-16">
             <Transition.Child
               as={Fragment}
               enter="ease-out duration-300"
@@ -40,9 +37,15 @@ export default function NewOfferModal({ open, closeModal }) {
               >
                 <Dialog.Title
                   as="h1"
-                  className="bg-red-600 text-2xl font-semibold text-white py-4"
+                  className="bg-red-600 text-2xl font-semibold text-white py-4 relative"
                 >
                   Crear anuncio de pokemon
+                  <button
+                    className="absolute top-4 w-8 h-8 right-4 p-1 bg-white hover:bg-red-100 transition-colors duration-200 rounded-lg text-red-900"
+                    onClick={() => closeModal()}
+                  >
+                    <HiXMark className="stroke-1" />
+                  </button>
                 </Dialog.Title>
                 <div className="dialog-body bg-white p-4">
                   <NewOfferForm closeModal={closeModal} />

@@ -14,6 +14,7 @@ import { useMemo } from 'react';
 import { addTradeOffer } from '../../store/slices/tradeOffers/thunks';
 import { useDispatch } from 'react-redux';
 import useAuth from '../../hooks/useAuth';
+import Autocomplete from '../Autocomplete';
 
 export default function NewOfferForm({ closeModal }) {
   const { user } = useAuth();
@@ -54,7 +55,9 @@ export default function NewOfferForm({ closeModal }) {
   });
 
   const handleShinyChange = () => setShiny(!shiny);
-  const handlePokemonChange = (e) => setPokemonNumber(e.target.value);
+  const handlePokemonChange = (selectedValue) => {
+    setPokemonNumber(selectedValue.value);
+  };
   const handleBallChange = (e) => setBall(Number(e.target.value));
   const handleLevelChange = (e) => setLevel(Number(e.target.value));
   const handleNatureChange = (e) => setNature(e.target.value);
@@ -108,22 +111,21 @@ export default function NewOfferForm({ closeModal }) {
 
   return (
     <form className="flex flex-col gap-8" onSubmit={handlePostOffer}>
-      <Select
-        label="Selecciona el pokemon que quieres intercambiar"
-        name="pokemon"
-        value={pokemonNumber}
-        onChange={handlePokemonChange}
-        options={
-          pokemonListStatus === pokemonListStatuses.loading
-            ? [{ value: -1, label: 'Cargando...' }]
-            : [
-                { value: -1, label: 'Selecciona un pokemon', disabled: true },
-                ...pokemonList.map((pokemon) => ({
-                  value: pokemon.number,
-                  label: pokemon.name,
-                })),
-              ]
+      <Autocomplete
+        suggestions={pokemonList.map((pokemon) => ({
+          label: pokemon.name,
+          value: pokemon.number,
+        }))}
+        selected={
+          pokemonList
+            .map((pokemon) => ({
+              label: pokemon.name,
+              value: pokemon.number,
+            }))
+            .find((p) => p.value === pokemonNumber) || -1
         }
+        onSelect={handlePokemonChange}
+        placeholder="Escribe el nombre del pokemon que quieres ofrecer"
       />
 
       {pokemon ? (
@@ -215,7 +217,7 @@ export default function NewOfferForm({ closeModal }) {
               onChange={handleItemChange}
             />
             <div className="flex flex-col gap-2">
-              <label>ivs</label>
+              <label>IVs</label>
               <div className="flex flex-row justify-between pb-2">
                 <div className="flex flex-col gap-2 items-center">
                   <label htmlFor="hp">HP</label>
@@ -274,7 +276,7 @@ export default function NewOfferForm({ closeModal }) {
               </div>
             </div>
             <div className="col-span-2 flex flex-col">
-              <label>evs</label>
+              <label>EVs</label>
               <div className="flex flex-row justify-between gap-2">
                 <div className="flex flex-col gap-2 items-center">
                   <label>HP</label>
