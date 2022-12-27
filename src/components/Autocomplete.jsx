@@ -10,7 +10,8 @@ export default function Autocomplete({
 }) {
   const [query, setQuery] = useState('');
   const handleSelect = (value) => onSelect(value);
-  const selected = suggestions.find((s) => s.value === selectedValue.value);
+  const selected =
+    suggestions.find((s) => s.value === selectedValue?.value) || suggestions[0];
 
   const filteredSuggestions =
     query === ''
@@ -28,7 +29,7 @@ export default function Autocomplete({
         <div className="relative w-full cursor-default rounded-lg bg-white text-left">
           <Combobox.Input
             className="w-full px-4 py-1.5 rounded-lg border-2 border-red-900 focus:outline-none font-semibold"
-            displayValue={(selected) => selected?.label}
+            displayValue={(suggestion) => suggestion?.label}
             onChange={(e) => setQuery(e.target.value)}
             placeholder={placeholder}
             autoComplete="off"

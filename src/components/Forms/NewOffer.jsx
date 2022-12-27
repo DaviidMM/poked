@@ -112,18 +112,19 @@ export default function NewOfferForm({ closeModal }) {
   return (
     <form className="flex flex-col gap-8" onSubmit={handlePostOffer}>
       <Autocomplete
-        suggestions={pokemonList.map((pokemon) => ({
-          label: pokemon.name,
-          value: pokemon.number,
-        }))}
-        selected={
-          pokemonList
-            .map((pokemon) => ({
-              label: pokemon.name,
-              value: pokemon.number,
-            }))
-            .find((p) => p.value === pokemonNumber) || -1
-        }
+        suggestions={[
+          { label: '', value: -1 },
+          ...pokemonList.map((pokemon) => ({
+            label: pokemon.name,
+            value: pokemon.number,
+          })),
+        ]}
+        selected={pokemonList
+          .map((pokemon) => ({
+            label: pokemon.name,
+            value: pokemon.number,
+          }))
+          .find((p) => p.value === pokemonNumber)}
         onSelect={handlePokemonChange}
         placeholder="Escribe el nombre del pokemon que quieres ofrecer"
       />

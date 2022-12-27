@@ -1,6 +1,6 @@
 const colors = {
   '': 'bg-white hover:text-red-900',
-  red: 'bg-red-700 text-white border-2 border-red-700 hover:text-red-900',
+  red: 'bg-red-700 text-white border-2 border-red-700 hover:text-red-900 [&:has(button:disabled)]:text-white',
   yellow:
     'bg-gradient-to-r bg-pos-0 bg-size-200 text-red-900 from-yellow-200 via-yellow-400 to-yellow-400 hover:bg-pos-100 transition-all duration-300 hover:text-red-900',
   green: 'bg-green-600 text-white',
@@ -25,7 +25,7 @@ export default function Button({
   return (
     <div
       className={
-        'group/button rounded-full overflow-hidden relative [&:has(button:disabled)]:opacity-75 [&:has(button:disabled)]:cursor-not-allowed [&:has(button:disabled)]:pointer-events-none' +
+        'group/button rounded-full overflow-hidden relative [&:has(button:disabled)]:opacity-75 [&:has(button:disabled)_button]:cursor-not-allowed' +
         ` ${colors[color]} ` +
         (className ? ' ' + className : '') +
         (border && !color ? ' border-2 border-red-900' : '')
